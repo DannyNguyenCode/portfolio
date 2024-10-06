@@ -53,9 +53,6 @@ const Nav = () => {
                             {setting}
                         </MenuItem>
                   ))}
-                  <MenuItem component={'a'} sx={{ textAlign: 'center' }} target='_blank' href='https://github.com/DannyNguyenCode'>
-                      Github
-                  </MenuItem>
                 </Menu>
           </Box>
         )
@@ -68,15 +65,12 @@ const Nav = () => {
                     {setting}
                 </MenuItem>
               ))}
-                <MenuItem component={'a'} sx={{ textAlign: 'center' }} target='_blank' rel="noopener noreferrer" href='https://github.com/DannyNguyenCode'>
-                    Github
-                </MenuItem>
         </Box>
         )
     }
 
   return (
-    <AppBar color='transparent' position="static">
+    <AppBar id='appBar' position="static">
       <Container maxWidth="xl">
         <Toolbar sx={{display:'flex',justifyContent:'space-between'}} disableGutters>
 

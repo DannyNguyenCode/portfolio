@@ -9,7 +9,6 @@ export default function Home() {
       <main>
         <Nav/>
         <Box sx={{ width: '100%' }}>
-          <LinearProgress />
         </Box>
         <Content/>
         <Footer/>
