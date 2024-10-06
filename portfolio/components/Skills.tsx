@@ -15,8 +15,8 @@ const Skills = () => {
       }, []);
     useEffect(()=>{
         timer.current = setTimeout(() => {
-            const navHeight:any = getElementHeights('nav');
-            const footerHeight:any = getElementHeights('footer')
+            const navHeight:number = getElementHeights('nav') as number;
+            const footerHeight:number = getElementHeights('footer') as number
             const mainHeight = window.innerHeight
       
             setContentHeight(mainHeight - navHeight-footerHeight)

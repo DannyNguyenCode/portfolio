@@ -15,8 +15,8 @@ const Home = () => {
       }, []);
     useEffect(()=>{
         timer.current = setTimeout(() => {
-            const navHeight:any = getElementHeights('nav');
-            const footerHeight:any = getElementHeights('footer')
+            const navHeight:number = getElementHeights('nav') as number;
+            const footerHeight:number = getElementHeights('footer')as number
             const mainHeight = window.innerHeight
       
             setContentHeight(mainHeight - navHeight-footerHeight)
@@ -38,7 +38,7 @@ const Home = () => {
 
     const handleButtonClick=()=>{
         setLoading(true)
-        var element = document.getElementById("skills") as HTMLElement;
+        let element = document.getElementById("skills") as HTMLElement;
         element.scrollIntoView({behavior: "smooth"});
         setLoading(false)
        
