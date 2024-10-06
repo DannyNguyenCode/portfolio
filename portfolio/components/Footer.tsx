@@ -8,7 +8,7 @@ const Footer = () => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up('sm'));
   return (
-    <AppBar className='app_bar_' position="fixed" sx={{ top: 'auto', bottom: 0 }}>
+    <AppBar id='footer' className='app_bar_' position="sticky" sx={{ top: 'auto', bottom: 0 }}>
       <Container sx={{marginBottom:'0.35em'}} maxWidth={matches ? 'lg' : 'xl'}>
         <Toolbar>
           
