@@ -2,7 +2,7 @@ import { set, connect } from "mongoose";
 
 let isConnected = false;
 
-export const DatabaseConnection = async ()=>{
+const DatabaseConnection = async ()=>{
     set('strictQuery', true);
 
     if(isConnected){
@@ -19,3 +19,5 @@ export const DatabaseConnection = async ()=>{
         console.log(error)
     }
 }
+
+export default DatabaseConnection
