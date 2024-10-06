@@ -3,7 +3,7 @@ import React from 'react'
 import { Box,Toolbar,IconButton,AppBar,Container,MenuItem,Menu } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu';
 
-const settings = ['Home', 'Skills', 'Education', 'Experiences','Contact'];
+const settings = ['Skills', 'Education', 'Experiences','Contact'];
 const Nav = () => {
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   
@@ -48,8 +48,11 @@ const Nav = () => {
                   onClose={handleCloseNavMenu}
                   sx={{ display: { xs: 'block', md: 'none' } }}
                 >
+                  <MenuItem onClick={handleLinkClick} component={'a'} sx={{ textAlign: 'center' }} href={`#top`}>
+                     Home
+                  </MenuItem>
                   {settings.map((setting) => (
-                        <MenuItem onClick={handleLinkClick} component={'a'} sx={{ textAlign: 'center' }} key={setting} href={`#${setting}`}>
+                        <MenuItem onClick={handleLinkClick} component={'a'} sx={{ textAlign: 'center' }} key={setting} href={`#${setting.toLowerCase()}`}>
                             {setting}
                         </MenuItem>
                   ))}
@@ -60,8 +63,11 @@ const Nav = () => {
     const navigationMenu=()=>{
         return (
         <Box sx={{  display: { xs: 'none', md: 'flex' } }}>
+                <MenuItem onClick={handleLinkClick} component={'a'} sx={{ textAlign: 'center' }} href={`#top`}>
+                   Home
+                </MenuItem>
               {settings.map((setting) => (
-                <MenuItem component={'a'} sx={{ textAlign: 'center' }} key={setting} href={`#${setting}`}>
+                <MenuItem component={'a'} sx={{ textAlign: 'center' }} key={setting} href={`#${setting.toLowerCase()}`}>
                     {setting}
                 </MenuItem>
               ))}
@@ -70,7 +76,7 @@ const Nav = () => {
     }
 
   return (
-    <AppBar className='app_bar_' position="static">
+    <AppBar id='nav' className='app_bar_' position="sticky">
       <Container maxWidth="xl">
         <Toolbar sx={{display:'flex',justifyContent:'space-between'}} disableGutters>
 
