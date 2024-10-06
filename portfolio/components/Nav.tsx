@@ -70,7 +70,7 @@ const Nav = () => {
     }
 
   return (
-    <AppBar id='appBar' position="static">
+    <AppBar className='app_bar_' position="static">
       <Container maxWidth="xl">
         <Toolbar sx={{display:'flex',justifyContent:'space-between'}} disableGutters>
 
