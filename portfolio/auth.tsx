@@ -1,7 +1,7 @@
 import NextAuth from "next-auth"
 import Credentials from "next-auth/providers/credentials"
 import { CredentialsSignin } from "next-auth";
-import { DatabaseConnection } from "@utils/database"
+import  DatabaseConnection  from "@utils/database"
 import bcrypt from 'bcryptjs'
 import { findUser } from "@utils/findUser";
 class CustomError extends CredentialsSignin {

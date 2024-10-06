@@ -2,7 +2,7 @@
 import Content from "@components/Content";
 import Nav from "@components/Nav";
 import Footer from "@components/Footer";
-import { Box,LinearProgress } from "@mui/material";
+import { Box } from "@mui/material";
 export default function Home() {
   return (
 
