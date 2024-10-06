@@ -38,7 +38,7 @@ const Home = () => {
 
     const handleButtonClick=()=>{
         setLoading(true)
-        let element = document.getElementById("skills") as HTMLElement;
+        const element = document.getElementById("skills") as HTMLElement;
         element.scrollIntoView({behavior: "smooth"});
         setLoading(false)
        
