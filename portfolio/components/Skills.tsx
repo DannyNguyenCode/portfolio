@@ -1,13 +1,27 @@
 'use client'
-import { Box,Button,CircularProgress,Skeleton } from '@mui/material'
+import { Box,Container,Grid2,Skeleton,Typography } from '@mui/material'
 import React, {useEffect,useState} from 'react'
 import { getElementHeights } from '@utils/getElementHeights'
-import { common } from '@mui/material/colors'
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import ProgressBarWithLabel from './ProgressBarWithLabel';
+
+
+const skillSets = [
+    {name:'JavaScript',value:85},
+    {name:'React',value:85},
+    {name:'Axios',value:75},
+    {name:'Mongoose',value:75},
+    {name:'Material UI',value:80},
+    {name:'NodeJS',value:75},
+    {name:'NextJS',value:70},
+    {name:'AuthJS',value:70},
+    {name:'Git',value:70}
+]
 const Skills = () => {
     const [contentHeight,setContentHeight]=useState<number>(0)
-    const [loading, setLoading] = React.useState(false);
+
     const timer = React.useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+
+
     React.useEffect(() => {
         return () => {
           clearTimeout(timer.current);
@@ -29,44 +43,38 @@ const Skills = () => {
               window.removeEventListener("resize", windowSizeHandler);
       
             };
-          }, 2000);
-
-
-      
-      
+          }, 2000);     
     },[contentHeight])
-    const handleButtonClick=()=>{
-        setLoading(true)
-       
-      }
+
   return (
     <>
-    {contentHeight?    
-    <Box id='skills' display={'flex'} textAlign={'center'}alignItems={'center'} justifyContent={'center'} width={'100%'} height={contentHeight} >
-        <Box sx={{ m: 1,height:'fit-content',position:'relative' }}>
-            <Button
-              variant="contained"
-              disabled={loading}
-              onClick={handleButtonClick}
-              endIcon={<ArrowForwardIcon />}
-            >
-              Load up skills
-            </Button>
-            {loading && (
-              <CircularProgress
-                size={24}
-                sx={{
-                color: common.white,
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                marginTop: '-12px',
-                marginLeft: '-12px',
-                }}
-              />
-            )}
+    {contentHeight?
+    <Container maxWidth='xl'>    
+        <Box id='skills' display={'flex'} width={'100%'} height={contentHeight}>
+            <Grid2 alignItems="center" justifyContent="center" width={'inherit'} spacing={2} container>
+
+                {skillSets.map((skill)=>{
+                    return(
+                        <Grid2 className="" size={{xs:12,md:3}}>
+                            <Box marginLeft={'8px'}>
+                                <Typography
+                                  variant="subtitle1"
+                                  sx={{ color: 'text.secondary' }}
+                                >{skill.name}</Typography>
+                            </Box>
+                            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                                <Box sx={{ width: '100%', mx: 1 }}>
+                                    <ProgressBarWithLabel value={skill.value.toString()}/>
+                                </Box>
+                            </Box>
+                        </Grid2>
+                    )
+                
+                })}
+    
+            </Grid2>
         </Box>
-    </Box>: 
+    </Container>: 
     <Skeleton sx={{ bgcolor: 'grey.600' }} variant="rectangular" width={'100vw'} height={'100vh'} />}
 </>
   )
