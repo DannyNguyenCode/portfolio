@@ -53,9 +53,9 @@ const Skills = () => {
         <Box id='skills' display={'flex'} width={'100%'} height={contentHeight}>
             <Grid2 alignItems="center" justifyContent="center" width={'inherit'} spacing={2} container>
 
-                {skillSets.map((skill)=>{
+                {skillSets.map((skill,i)=>{
                     return(
-                        <Grid2 className="" size={{xs:12,md:3}}>
+                        <Grid2 key={i} className="" size={{xs:12,md:3}}>
                             <Box marginLeft={'8px'}>
                                 <Typography
                                   variant="subtitle1"
