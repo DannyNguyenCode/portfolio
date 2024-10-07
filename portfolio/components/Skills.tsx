@@ -1,7 +1,6 @@
 'use client'
-import { Box,Container,Grid2,Skeleton,Typography } from '@mui/material'
-import React, {useEffect,useState} from 'react'
-import { getElementHeights } from '@utils/getElementHeights'
+import { Box,Container,Grid2,Typography } from '@mui/material'
+import React from 'react'
 import ProgressBarWithLabel from './ProgressBarWithLabel';
 
 
@@ -17,42 +16,12 @@ const skillSets = [
     {name:'Git',value:70}
 ]
 const Skills = () => {
-    const [contentHeight,setContentHeight]=useState<number>(0)
-
-    const timer = React.useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
 
 
-    React.useEffect(() => {
-        return () => {
-          clearTimeout(timer.current);
-        };
-      }, []);
-    useEffect(()=>{
-        timer.current = setTimeout(() => {
-            const navHeight:number = getElementHeights('nav') as number;
-            const footerHeight:number = getElementHeights('footer') as number
-            const mainHeight = window.innerHeight
-      
-            setContentHeight(mainHeight - navHeight-footerHeight)
-            const windowSizeHandler = () => {
-              setContentHeight(mainHeight - navHeight-footerHeight)
-            };
-            window.addEventListener("resize", windowSizeHandler);
-      
-            return () => {
-              window.removeEventListener("resize", windowSizeHandler);
-      
-            };
-          }, 2000);     
-    },[contentHeight])
-
-  return (
-    <>
-    {contentHeight?
-    <Container maxWidth='xl'>    
-        <Box id='skills' display={'flex'} width={'100%'} height={contentHeight}>
-            <Grid2 alignItems="center" justifyContent="center" width={'inherit'} spacing={2} container>
-
+  return (  
+    <Box id='skills'  height={'inherit'}>
+        <Container sx={{height:'inherit'}} maxWidth='xl'> 
+            <Grid2 alignItems="center" justifyContent="center" width={'inherit'} height={'inherit'} spacing={2} container>
                 {skillSets.map((skill,i)=>{
                     return(
                         <Grid2 key={i} className="" size={{xs:12,md:3}}>
@@ -71,12 +40,9 @@ const Skills = () => {
                     )
                 
                 })}
-    
             </Grid2>
-        </Box>
-    </Container>: 
-    <Skeleton sx={{ bgcolor: 'grey.600' }} variant="rectangular" width={'100vw'} height={'100vh'} />}
-</>
+        </Container>
+    </Box>
   )
 }
 
