@@ -14,7 +14,7 @@ const Home = () => {
        
       }
   return (  
-    <Box id='home' display={'flex'} textAlign={'center'}alignItems={'center'} justifyContent={'center'} width={'100%'} height={'inherit'} bgcolor={'primary.main'}>
+    <Box display={'flex'} textAlign={'center'}alignItems={'center'} justifyContent={'center'} width={'100%'} minHeight={'inherit'} bgcolor={'primary.main'}>
         <Box sx={{ m: 1,height:'fit-content', position:'relative' }}>
             <Button
               variant="contained"

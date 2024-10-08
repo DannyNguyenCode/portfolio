@@ -19,9 +19,9 @@ const Skills = () => {
 
 
   return (  
-    <Box id='skills'  height={'inherit'}>
-        <Container sx={{height:'inherit'}} maxWidth='xl'> 
-            <Grid2 alignItems="center" justifyContent="center" width={'inherit'} height={'inherit'} spacing={2} container>
+    <Box paddingY={{xs:'1rem',md:0}} minHeight={'inherit'}>
+        <Container sx={{minHeight:'inherit'}} maxWidth='xl'> 
+            <Grid2 alignItems="center"  width={'inherit'} minHeight={'inherit'} spacing={2} container>
                 {skillSets.map((skill,i)=>{
                     return(
                         <Grid2 key={i} className="" size={{xs:12,md:3}}>
