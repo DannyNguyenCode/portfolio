@@ -2,11 +2,16 @@
 import React,{useEffect,useState} from 'react'
 import { getElementHeights } from '@utils/getElementHeights'
 import { Skeleton,Box } from '@mui/material'
-export const ContentWrapper = ({
-    children,
-  }: Readonly<{
-    children: React.ReactNode;
-  }>) => {
+export const ContentWrapper = (
+    {
+      children,
+      pageText
+     
+    }:{
+      children: React.ReactNode;
+      pageText:string
+    }
+) => {
     const timer = React.useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
     const [contentHeight,setContentHeight]=useState<number>(0)
     useEffect(() => {
@@ -37,6 +42,6 @@ export const ContentWrapper = ({
       
     },[contentHeight])
   return (
-    <>{contentHeight?<Box height={contentHeight}> {children}</Box>:<Skeleton sx={{ bgcolor: 'grey.600' }} variant="rectangular" width={'100vw'} height={'100vh'} />}</>
+    <>{contentHeight?<Box minHeight={contentHeight} id={pageText.toLowerCase()}> {children}</Box>:<Skeleton sx={{ bgcolor: 'grey.600' }} variant="rectangular" width={'100vw'} height={'100vh'} />}</>
   )
 }
