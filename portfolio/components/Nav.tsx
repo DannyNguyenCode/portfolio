@@ -3,7 +3,7 @@ import React from 'react'
 import { Box,Toolbar,IconButton,AppBar,Container,MenuItem,Menu } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu';
 
-const settings = ['Skills', 'Education', 'Experiences','Contact'];
+const settings = ['Skills', 'Education', 'Experiences'];
 const Nav = () => {
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   
@@ -83,9 +83,9 @@ const Nav = () => {
             {navigationMenu()}
 
             {collapseNavigation()}
-            <MenuItem component={'a'} sx={{ textAlign: 'center' }} href='/login'>
+            {/* <MenuItem component={'a'} sx={{ textAlign: 'center' }} href='/login'>
                 Admin Login
-            </MenuItem>
+            </MenuItem> */}
         </Toolbar>
       </Container>
     </AppBar>

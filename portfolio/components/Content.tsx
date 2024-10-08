@@ -7,13 +7,15 @@ import { ContentWrapper } from './ContentWrapper'
 const Content = () => {
   return (
     <>
-      <ContentWrapper>
+      <ContentWrapper pageText={'home'}>
         <Home/>
       </ContentWrapper>
-      <ContentWrapper>
+      <ContentWrapper pageText={'skills'}>
         <Skills/>
       </ContentWrapper>
-      <Education/>
+      <ContentWrapper pageText={'education'}>
+        <Education/>
+      </ContentWrapper>
     </>
 
   )
