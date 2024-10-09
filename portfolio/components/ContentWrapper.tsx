@@ -12,22 +12,20 @@ export const ContentWrapper = (
       pageText:string
     }
 ) => {
-    const timer = React.useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
     const [contentHeight,setContentHeight]=useState<number>(0)
     useEffect(() => {
-        return () => {
-          clearTimeout(timer.current);
-        };
+          const navHeight:number = getElementHeights('nav') as number;
+          const footerHeight:number = getElementHeights('footer')as number
+          const mainHeight = window.innerHeight
+          setContentHeight(mainHeight - navHeight-footerHeight)
+ 
       }, []);
     useEffect(()=>{
-        timer.current = setTimeout(() => {
-            const navHeight:number = getElementHeights('nav') as number;
-            const footerHeight:number = getElementHeights('footer')as number
-            const mainHeight = window.innerHeight
-      
-            setContentHeight(mainHeight - navHeight-footerHeight)
             const windowSizeHandler = () => {
-              setContentHeight(mainHeight - navHeight-footerHeight)
+                const navHeight:number = getElementHeights('nav') as number;
+                const footerHeight:number = getElementHeights('footer')as number
+                const mainHeight = window.innerHeight
+                setContentHeight(mainHeight - navHeight-footerHeight)
             };
             window.addEventListener("resize", windowSizeHandler);
       
@@ -35,7 +33,7 @@ export const ContentWrapper = (
               window.removeEventListener("resize", windowSizeHandler);
       
             };
-          }, 2000);
+
 
 
       

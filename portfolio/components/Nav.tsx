@@ -3,7 +3,7 @@ import React from 'react'
 import { Box,Toolbar,IconButton,AppBar,Container,MenuItem,Menu } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu';
 
-const settings = ['Skills', 'Education', 'Experiences'];
+const settings = ['Skills', 'Education','Employment', 'Projects'];
 const Nav = () => {
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   
