@@ -13,9 +13,8 @@ const Footer = () => {
         <Toolbar>
           
           <Box sx={{ flexGrow: 1 }}>
-            <Grid2 container spacing={2}>
-              <Grid2 size={12}><Typography variant="h4" sx={{marginTop:'0.35em'}} gutterBottom textAlign={'center'}>Contact</Typography></Grid2>
-              <Grid2  size={{ xs: 12, md: 6 }}>
+            <Grid2 sx={{marginTop:'0.35em'}}   container spacing={2}>
+              <Grid2 size={{ xs: 12, md: 6 }}>
                 <Stack textAlign={matches?'center':'left'} direction={'column'} spacing={2}>
                     <Typography sx={{padding:'8px'}}>Gia Bao Nguyen</Typography>
                     <Typography sx={{padding:'8px'}}>Email: gbnguyenw@gmail.com</Typography>
