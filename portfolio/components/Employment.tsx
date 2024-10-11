@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { Box,Container,Divider,Grid2,Paper,Stack,Typography } from '@mui/material'
+import { Box,Container,Grid2,Stack,Typography } from '@mui/material'
 import EmploymentAccordion from './EmploymentAccordion'
 const Employment = () => {
   const shipvistaSkills = 
