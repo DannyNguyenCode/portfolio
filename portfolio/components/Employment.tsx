@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { Box,Container,Grid2 } from '@mui/material'
+import { Box,Container,Divider,Grid2,Paper,Stack,Typography } from '@mui/material'
 import EmploymentAccordion from './EmploymentAccordion'
 const Employment = () => {
   const shipvistaSkills = 
@@ -51,16 +51,24 @@ const Employment = () => {
   ]
   return (
     <Box sx={{minHeight:'inherit', justifyContent:'center',alignItems:'center',display:'flex'}}>
-      <Container sx={{paddingY:'24px'}} maxWidth={'xl'}>
-        <Grid2 spacing={2} container>
-          <Grid2 size={12}>
-            <EmploymentAccordion skills={shipvistaSkills} company={'Shipvista'} jobTitle={'Junior Developer'}/>
+      <Stack direction={'column'} marginY={'1em'}>
+  
+        <Typography gutterBottom textAlign={'center'} variant="h5" component="div">
+          Employment History
+        </Typography>
+
+
+        <Container  maxWidth={'xl'}>
+          <Grid2 spacing={2} container>
+            <Grid2 size={12}>
+              <EmploymentAccordion skills={shipvistaSkills} company={'Shipvista'} jobTitle={'Junior Developer'}/>
+            </Grid2>
+            <Grid2 size={12}>
+              <EmploymentAccordion skills={senecaCollegeSkills} company={'Seneca College'} jobTitle={'IT Service Desk Technologist'}/>
+            </Grid2>
           </Grid2>
-          <Grid2 size={12}>
-            <EmploymentAccordion skills={senecaCollegeSkills} company={'Seneca College'} jobTitle={'IT Service Desk Technologist'}/>
-          </Grid2>
-        </Grid2>
-      </Container>
+        </Container>
+      </Stack>
     </Box>
   )
 }
