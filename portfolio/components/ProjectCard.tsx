@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { Card,CardContent,Typography,CardActions,Button, Grid2,List,ListItem,ListItemText,Divider } from '@mui/material'
+import { Card,CardContent,Typography,CardActions,Button, Grid2,List,ListItem,ListItemText,Divider,Box } from '@mui/material'
 type Feature={
     primary:string,
     secondary:string
@@ -29,15 +29,15 @@ const ProjectCard = ({projects}:{projects:Project[]}) => {
                                 <List dense>                                
                                     {project.features.map((feature,i)=>{
                                         return(
-                                            <>
-                                                <ListItem  key={i}>
+                                            <Box  key={i}>
+                                                <ListItem >
                                                     <ListItemText    
                                                         primary={feature.primary}
                                                         secondary={feature.secondary}
                                                     />
                                                 </ListItem>
                                                 <Divider component="li" />
-                                            </>
+                                            </Box>
                                         )
                                     })}
                                 </List>
