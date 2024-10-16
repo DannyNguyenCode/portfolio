@@ -1,43 +1,54 @@
 'use client'
-import { Box,Button,CircularProgress } from '@mui/material'
-import React,{useState} from 'react'
-import { common } from '@mui/material/colors'
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-const Home = () => {
+import { Box, Grid2, Stack, ThemeProvider, Typography,responsiveFontSizes,createTheme, Button } from '@mui/material'
+import React from 'react'
 
-    const [loading, setLoading] = useState(false);
-    const handleButtonClick=()=>{
-        setLoading(true)
-        const element = document.getElementById("skills") as HTMLElement;
-        element.scrollIntoView({behavior: "smooth"});
-        setLoading(false)
-       
-      }
+import TypeWritter from './TypeWritter';
+import HomeDialog from './HomeDialog';
+import dancingScript from '@styles/dancingScript'
+const Home = () => {
+  let theme = createTheme();
+  theme = responsiveFontSizes(theme);
   return (  
     <Box display={'flex'} textAlign={'center'}alignItems={'center'} justifyContent={'center'} width={'100%'} minHeight={'inherit'} bgcolor={'primary.main'}>
-        <Box sx={{ m: 1,height:'fit-content', position:'relative' }}>
-            <Button
-              variant="contained"
-              disabled={loading}
-              onClick={handleButtonClick}
-              endIcon={<ArrowForwardIcon />}
-            >
-              Click to See next
-            </Button>
-            {loading && (
-              <CircularProgress
-                size={24}
-                sx={{
-                color: common.white,
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                marginTop: '-12px',
-                marginLeft: '-12px',
-                }}
-              />
-            )}
-        </Box>
+      <Grid2 width={'inherit'} container>
+        <Grid2 display={'flex'} justifyContent={'center'} size={{xs:12,md:12}}>
+          <Stack alignItems={'center'} textAlign={'center'} direction={'column'} spacing={2}>
+              <TypeWritter>
+                <ThemeProvider theme={dancingScript}>
+                  <Typography textAlign={'center'} color='white' variant='h4'>Gia Bao Nguyen</Typography>
+                </ThemeProvider>
+              </TypeWritter>
+             
+              <Box sx={{padding:{xs:'1em'}}}>
+                <ThemeProvider theme={theme}>
+                    <Typography sx={{textAlign:'left'}} maxWidth={800} color='white'>
+                          Junior Developer with 1 year experience developing within React and Nodejs for an e-commerce website.
+                    </Typography>
+                    <Typography sx={{textAlign:'left'}} maxWidth={800} color='white'>
+                          An enthusiast for responsive designs, utilizing libraries such as Material UI to enhance user experience.
+                    </Typography>
+                    <Typography sx={{textAlign:'left'}} maxWidth={800} color='white'>
+                          A computer programmer graduate with front-end, back-end, and database skills. 
+                    </Typography>
+                    <Typography sx={{textAlign:'left'}} maxWidth={800} color='white'>
+                          Enjoys creating websites that enhances user engagement.
+                    </Typography>
+                    <Typography sx={{textAlign:'left'}} maxWidth={800} color='white'>
+                          Finding creative solutions to difficult problems.
+                    </Typography>
+                </ThemeProvider>
+              </Box>
+       
+            <Box sx={{height:'fit-content', position:'relative',width:'100%', padding:{xs:0,md:'1em'} }}  >
+              <Stack width={'inherit'} direction={'row'} display={'flex'} justifyContent={'space-evenly'} spacing={2}>
+                <HomeDialog title='Resume' link='https://res.cloudinary.com/dblayhcrg/image/upload/v1728996558/Resume_akrblz.pdf' downloadLink={`https://res.cloudinary.com/dblayhcrg/image/upload/fl_attachment:Gia_Bao_Nguyen_Resume/v1728996558/Resume_akrblz.pdf`}/>
+                <HomeDialog title='Cover Letter' link='https://res.cloudinary.com/dblayhcrg/image/upload/v1728996557/CoverLetter_jr0sxe.pdf' downloadLink={`https://res.cloudinary.com/dblayhcrg/image/upload/fl_attachment:Gia_Bao_Nguyen_CoverLetter/v1728996557/CoverLetter_jr0sxe.pdf`}/>
+                <Button variant="contained" href='https://github.com/DannyNguyenCode' target='_blank' rel='noopener noreferrer'>Github</Button>
+              </Stack>
+            </Box>
+          </Stack>
+        </Grid2>
+      </Grid2>
     </Box>
   )
 }

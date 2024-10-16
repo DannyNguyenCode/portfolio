@@ -48,11 +48,11 @@ const Nav = () => {
                   onClose={handleCloseNavMenu}
                   sx={{ display: { xs: 'block', md: 'none' } }}
                 >
-                  <MenuItem onClick={handleLinkClick} component={'a'} sx={{ textAlign: 'center' }} href={`#top`}>
+                  <MenuItem onClick={handleLinkClick} component={'a'} sx={{ textAlign: 'center' }} href={`/`}>
                      Home
                   </MenuItem>
                   {settings.map((setting) => (
-                        <MenuItem onClick={handleLinkClick} component={'a'} sx={{ textAlign: 'center' }} key={setting} href={`#${setting.toLowerCase()}`}>
+                        <MenuItem onClick={handleLinkClick} component={'a'} sx={{ textAlign: 'center' }} key={setting} href={`/${setting.toLowerCase()}`}>
                             {setting}
                         </MenuItem>
                   ))}
@@ -63,11 +63,11 @@ const Nav = () => {
     const navigationMenu=()=>{
         return (
         <Box sx={{  display: { xs: 'none', md: 'flex' } }}>
-                <MenuItem onClick={handleLinkClick} component={'a'} sx={{ textAlign: 'center' }} href={`#top`}>
+                <MenuItem onClick={handleLinkClick} component={'a'} sx={{ textAlign: 'center' }} href={`/`}>
                    Home
                 </MenuItem>
               {settings.map((setting) => (
-                <MenuItem component={'a'} sx={{ textAlign: 'center' }} key={setting} href={`#${setting.toLowerCase()}`}>
+                <MenuItem component={'a'} sx={{ textAlign: 'center' }} key={setting} href={`/${setting.toLowerCase()}`}>
                     {setting}
                 </MenuItem>
               ))}

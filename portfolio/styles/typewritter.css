@@ -1,0 +1,30 @@
+/* credit: https://css-tricks.com/author/geoffgraham/ */
+/* Link to article: https://css-tricks.com/snippets/css/typewriter-effect/ */
+
+.typewritter * {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid white; 
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .17em; /* Adjust as needed */
+    margin-top: -24px !important;
+    animation: 
+      typing 2.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+    animation-fill-mode: forwards;
+}
+
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100%;}
+  99% {border-right: .15em solid white;}
+  100% {border-right: none;}
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,to { border-color: transparent }
+  50% { border-color: white; } 
+}
