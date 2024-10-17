@@ -30,7 +30,7 @@ export const PUT=async(req:NextRequest)=>{
         return new Response(JSON.stringify(updatedUser), {status:200})
 
     }catch(err){
-        return new Response("Failed to update user", {status:500})
+        return new Response(`Failed to update user: ${err}`, {status:500})
     }
 }
 
@@ -61,6 +61,6 @@ export const DELETE = async(req:NextRequest)=>{
         const deletedUser = await User.findOneAndDelete({email:req.nextUrl.searchParams.get("email")})
         return new Response(JSON.stringify(deletedUser), {status:200})
     }catch(err){
-        return new Response("Failed to delete user from database", {status:500})
+        return new Response(`Failed to delete user from database: ${err}`, {status:500})
     }
 }
