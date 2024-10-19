@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React,{FormEvent} from 'react'
 import { Box,FormControl,InputLabel,OutlinedInput,InputAdornment,IconButton,Button,CircularProgress,Alert,Typography } from '@mui/material'
 import { Visibility,VisibilityOff } from '@mui/icons-material'
 
@@ -20,7 +20,7 @@ const Form = (
     }
     :
     {
-        onSubmit:(e:any)=>void
+        onSubmit:(e:FormEvent<HTMLFormElement>)=>void
         buttonText:string
         loading:boolean
         confirmPassword?:boolean
