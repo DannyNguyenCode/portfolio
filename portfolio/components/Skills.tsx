@@ -41,6 +41,7 @@ const Skills = () => {
                 
                 })}
             </Grid2>
+   
         </Container>
     </Box>
   )

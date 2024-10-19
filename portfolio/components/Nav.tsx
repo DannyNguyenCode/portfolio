@@ -1,12 +1,15 @@
 'use client'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Box,Toolbar,IconButton,AppBar,Container,MenuItem,Menu } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu';
-
+import { usePathname } from 'next/navigation'
 const settings = ['Skills', 'Education','Employment', 'Projects'];
 const Nav = () => {
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
-  
+    const pathname = usePathname()
+    useEffect(()=>{
+      console.log("pathname",pathname) 
+    },[pathname])
     const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
       setAnchorElNav(event.currentTarget);
     };
@@ -19,7 +22,6 @@ const Nav = () => {
         setAnchorElNav(null);
     };
     const collapseNavigation = ()=>{
-        // collapse navigation links into menu icon
         return(
             <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
                 <IconButton

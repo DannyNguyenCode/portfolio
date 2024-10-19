@@ -1,10 +1,10 @@
 import Education from '@components/Education'
 import React from 'react'
 
-const page = () => {
+const EducationPage = () => {
   return (
     <Education/>
   )
 }
 
-export default page
+export default EducationPage

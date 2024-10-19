@@ -1,10 +1,10 @@
 import Employment from '@components/Employment'
 import React from 'react'
 
-const page = () => {
+const EmploymentPage = () => {
   return (
     <Employment/>
   )
 }
 
-export default page
+export default EmploymentPage
