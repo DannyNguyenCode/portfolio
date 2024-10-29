@@ -62,6 +62,31 @@ const Projects = () => {
       link:"https://github.com/DannyNguyenCode/pet200",
       hostLink:''
     },
+    {
+      title:'Snake Game',
+      desc:`Basic Arcade Snake Game on Android`,
+      features:[
+        {
+          primary:'Flutter',
+          secondary:'Built-in widgets to create layouts and present data'
+        },
+        {
+          primary:'Dart',
+          secondary:'Programming language used to integrate movement, determine state of game, and create classes'
+        },
+        {
+          primary:'Flame Engine',
+          secondary:'Ready to ship widgets which include controlling character, collision logic, and create the board'
+        },
+        {
+          primary:'Firebase',
+          secondary:'Authentication, Authorization, and database integration'
+        },
+       
+      ],
+      link:"https://github.com/DannyNguyenCode/flutter_snake",
+      hostLink:''
+    },
 
   ]
   return (
