@@ -2,7 +2,7 @@
 import Skills from '@components/Skills'
 import React, { FormEvent } from 'react'
 import Form from '@components/interactions/Form'
-import { Tab,Tabs,Box, Typography,Grid2,List,ListItem,ListItemText, Paper, Divider, Container } from '@mui/material'
+import { Tab,Tabs,Box, Typography,Grid2,List,ListItem,ListItemText, Paper, Divider, Container,ListSubheader } from '@mui/material'
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { User } from '@interfaces/User'
@@ -32,6 +32,7 @@ const SkillsPage = () => {
             }
         })
     },[])
+
     function CustomTabPanel(props: TabPanelProps) {
         const { children, value, index, ...other } = props;
       
@@ -226,8 +227,9 @@ const SkillsPage = () => {
 
                 </Grid2>
                 <Grid2 display={'flex'} justifyContent={'center'} alignItems={'center'} size={{xs:12,md:6}}>
-                    <Paper elevation={1} sx={{marginX:'1.5em',width:'fit-content',paddingBottom:'0.5em'}}>
-                        <Typography sx={{padding:'0.5em'}} variant='h6'>All users currently in database</Typography>
+                    <Paper elevation={1} sx={{marginX:'1.5em',width:'fit-content',paddingBottom:'0.5em',maxHeight:'300px',overflow: 'auto'}}>
+                        <ListSubheader><Typography sx={{padding:'0.5em'}} variant='h6'>All users currently in database</Typography></ListSubheader>
+                     
                         <Divider/>
                         <List >
                             {allUsers && allUsers.map((user)=>{
