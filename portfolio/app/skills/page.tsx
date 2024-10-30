@@ -2,10 +2,13 @@
 import Skills from '@components/Skills'
 import React, { FormEvent } from 'react'
 import Form from '@components/interactions/Form'
-import { Tab,Tabs,Box, Typography,Grid2,List,ListItem,ListItemText, Paper, Divider, Container,ListSubheader } from '@mui/material'
+import { Tab,Tabs,Box, Typography,Grid2,List,ListItem,ListItemText, Paper, Divider, Container,ListSubheader,ThemeProvider,createTheme,responsiveFontSizes } from '@mui/material'
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { User } from '@interfaces/User'
+import TypeWritter from '@components/TypeWritter'
+
+import dancingScript from '@styles/dancingScript'
 // references on how to handle onsubmit for this form using form data
 // https://stackoverflow.com/a/56071983/27080552
 // article reference: https://medium.com/@everdimension/how-to-handle-forms-with-just-react-ac066c48bd4f
@@ -15,6 +18,8 @@ interface TabPanelProps {
     index: number;
     value: number;
 }
+let responsiveTheme = createTheme();
+responsiveTheme = responsiveFontSizes(responsiveTheme);
 const SkillsPage = () => {
     const theme = useTheme();
     const scrollable = useMediaQuery(theme.breakpoints.down('md'));
@@ -48,7 +53,8 @@ const SkillsPage = () => {
             {value === index && <Box sx={{ p: 3}}>{children}</Box>}
           </div>
         );
-      }
+    }
+
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
         setValue(newValue);
         setResponseMessage('')
@@ -193,12 +199,21 @@ const SkillsPage = () => {
         })
     }
   return (
-    <Box marginTop={'1em'} width={'100%'}>
+    <Box width={'100%'}>
         <Container maxWidth={'xl'}>  
             <Grid2 spacing={2} container>
-
+                <Grid2 paddingTop={'2em'} display={'flex'} justifyContent={'center'} size={{xs:12}}>
+                    <TypeWritter>
+                        <ThemeProvider theme={dancingScript}>
+                          <Typography textAlign={'center'} color='black' variant='h4'>Skills</Typography>
+                        </ThemeProvider>
+                    </TypeWritter>
+                </Grid2>
                 <Grid2 size={{xs:12,md:6}}>
-                    <Typography textAlign={'center'} sx={{padding:'0.5em'}} variant='h6'>CRUD operations playground for users</Typography>
+                    <ThemeProvider theme={responsiveTheme}>
+                        <Typography textAlign={'center'} sx={{padding:'0.5em'}} variant='h6'>CRUD operations playground for users</Typography>
+                    </ThemeProvider>
+
                     <Divider/>
                     <Box >
                         <Box sx={{width: '100%', borderBottom: 1, borderColor: 'divider' }}>
@@ -228,7 +243,7 @@ const SkillsPage = () => {
                 </Grid2>
                 <Grid2 display={'flex'} justifyContent={'center'} alignItems={'center'} size={{xs:12,md:6}}>
                     <Paper elevation={1} sx={{marginX:'1.5em',width:'fit-content',paddingBottom:'0.5em',maxHeight:'300px',overflow: 'auto'}}>
-                        <ListSubheader><Typography sx={{padding:'0.5em'}} variant='h6'>All users currently in database</Typography></ListSubheader>
+                        <ListSubheader><ThemeProvider theme={responsiveTheme}><Typography sx={{padding:'0.5em'}} variant='h6'>All users currently in database</Typography></ThemeProvider></ListSubheader>
                      
                         <Divider/>
                         <List >
