@@ -1,7 +1,10 @@
-import React from 'react'
-import ProjectCard from './ProjectCard'
-import { Container,Box,Typography } from '@mui/material'
 
+import React from 'react'
+import { Container,Box,Typography, ThemeProvider } from '@mui/material'
+import TypeWritter from '@components/TypeWritter'
+
+import dancingScript from '@styles/dancingScript'
+import ProjectCard from './ProjectCard'
 const Projects = () => {
   const projects = 
   [
@@ -62,14 +65,46 @@ const Projects = () => {
       link:"https://github.com/DannyNguyenCode/pet200",
       hostLink:''
     },
+    {
+      title:'Snake Game',
+      desc:`Basic Arcade Snake Game on Android`,
+      features:[
+        {
+          primary:'Flutter',
+          secondary:'Built-in widgets to create layouts and present data'
+        },
+        {
+          primary:'Dart',
+          secondary:'Programming language used to integrate movement, determine state of game, and create classes'
+        },
+        {
+          primary:'Flame Engine',
+          secondary:'Ready to ship widgets which include controlling character, collision logic, and create the board'
+        },
+        {
+          primary:'Firebase',
+          secondary:'Authentication, Authorization, and database integration'
+        },
+       
+      ],
+      link:"https://github.com/DannyNguyenCode/flutter_snake",
+      hostLink:''
+    },
 
   ]
   return (
-    <Box bgcolor={'primary.main'}>
-      <Container sx={{padding:'1em'}} maxWidth='xl'>
-        <Typography color='white' gutterBottom textAlign={'center'} variant="h5" component="div">
-          Projects
-        </Typography>
+    <Box minHeight={'inherit'} bgcolor={'primary.main'}>
+      <Container sx={{padding:'1em', minHeight:'inherit'}} maxWidth='xl'>
+      <Box
+          width={'100%'}
+          sx={{textAlign:'center', display:'flex', justifyContent:'center', marginBottom:'1em', marginTop:'1rem'}}
+        >
+            <TypeWritter>
+                <ThemeProvider theme={dancingScript}>
+                  <Typography textAlign={'center'} color='white' variant='h4'>Projects</Typography>
+                </ThemeProvider>
+            </TypeWritter>
+        </Box>
         <ProjectCard projects={projects}/>
       </Container>
     </Box>

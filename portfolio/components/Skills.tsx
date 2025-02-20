@@ -13,6 +13,7 @@ const skillSets = [
     {name:'NodeJS',value:75},
     {name:'NextJS',value:70},
     {name:'AuthJS',value:70},
+    {name:'Flutter',value:65},
     {name:'Git',value:70}
 ]
 const Skills = () => {
@@ -41,6 +42,7 @@ const Skills = () => {
                 
                 })}
             </Grid2>
+   
         </Container>
     </Box>
   )

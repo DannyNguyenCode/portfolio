@@ -1,7 +1,10 @@
 'use client'
 import React from 'react'
-import { Box,Container,Grid2,Stack,Typography } from '@mui/material'
+import { Box,Container,Grid2,Stack,Typography, ThemeProvider } from '@mui/material'
 import EmploymentAccordion from './EmploymentAccordion'
+import TypeWritter from '@components/TypeWritter'
+
+import dancingScript from '@styles/dancingScript'
 const Employment = () => {
   const shipvistaSkills = 
   [
@@ -53,10 +56,16 @@ const Employment = () => {
     <Box sx={{minHeight:'inherit', justifyContent:'center',alignItems:'center',display:'flex'}}>
       <Stack direction={'column'} marginY={'1em'}>
   
-        <Typography gutterBottom textAlign={'center'} variant="h5" component="div">
-          Employment History
-        </Typography>
-
+        <Box
+          width={'100%'}
+          sx={{textAlign:'center', display:'flex', justifyContent:'center', marginBottom:'1em', marginTop:'1rem'}}
+        >
+            <TypeWritter>
+                <ThemeProvider theme={dancingScript}>
+                  <Typography textAlign={'center'} color='black' variant='h4'>Employment</Typography>
+                </ThemeProvider>
+            </TypeWritter>
+        </Box>
 
         <Container  maxWidth={'xl'}>
           <Grid2 spacing={2} container>

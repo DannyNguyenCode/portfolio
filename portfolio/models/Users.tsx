@@ -1,19 +1,18 @@
 import { Schema, model, models } from "mongoose";
 
 const UserSchema = new Schema({
-    ObjectId: {
-        type: Schema.ObjectId,
-        unique:true
-    },
     email:{
         type: String,
         unique:true
     },
     password:{
         type:String,
+    },
+    isAdmin:{
+        type:Boolean
     }
 })
 
-const User = models?.User || model("User", UserSchema);
+const User = models.User || model("User", UserSchema);
 
 export default User;

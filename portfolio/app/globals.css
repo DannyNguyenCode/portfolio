@@ -10,3 +10,11 @@ html {
  body *{
   scroll-margin-top: 64px;
  }
+
+ #main{
+  min-height: inherit;
+ }
+
+ .content{
+  
+ }

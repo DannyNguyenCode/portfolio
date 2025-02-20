@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import "./globals.css";
-
+import { ContentWrapper } from "@components/ContentWrapper";
+import Nav from "@components/Nav";
+import Footer from "@components/Footer";
 
 export const metadata: Metadata = {
   title: "Danny Nguyen's Portfolio",
@@ -17,7 +19,11 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <AppRouterCacheProvider>
-          {children}
+          <Nav/>
+            <ContentWrapper>
+              {children}
+            </ContentWrapper>
+          <Footer/>
         </AppRouterCacheProvider>
       </body>
     </html>

@@ -2,11 +2,11 @@
 import React from 'react'
 import { Box,Toolbar,IconButton,AppBar,Container,MenuItem,Menu } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu';
-
 const settings = ['Skills', 'Education','Employment', 'Projects'];
 const Nav = () => {
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
-  
+
+
     const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
       setAnchorElNav(event.currentTarget);
     };
@@ -19,7 +19,6 @@ const Nav = () => {
         setAnchorElNav(null);
     };
     const collapseNavigation = ()=>{
-        // collapse navigation links into menu icon
         return(
             <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
                 <IconButton
@@ -48,11 +47,11 @@ const Nav = () => {
                   onClose={handleCloseNavMenu}
                   sx={{ display: { xs: 'block', md: 'none' } }}
                 >
-                  <MenuItem onClick={handleLinkClick} component={'a'} sx={{ textAlign: 'center' }} href={`#top`}>
+                  <MenuItem onClick={handleLinkClick} component={'a'} sx={{ textAlign: 'center' }} href={`/`}>
                      Home
                   </MenuItem>
                   {settings.map((setting) => (
-                        <MenuItem onClick={handleLinkClick} component={'a'} sx={{ textAlign: 'center' }} key={setting} href={`#${setting.toLowerCase()}`}>
+                        <MenuItem onClick={handleLinkClick} component={'a'} sx={{ textAlign: 'center' }} key={setting} href={`/${setting.toLowerCase()}`}>
                             {setting}
                         </MenuItem>
                   ))}
@@ -63,11 +62,11 @@ const Nav = () => {
     const navigationMenu=()=>{
         return (
         <Box sx={{  display: { xs: 'none', md: 'flex' } }}>
-                <MenuItem onClick={handleLinkClick} component={'a'} sx={{ textAlign: 'center' }} href={`#top`}>
+                <MenuItem onClick={handleLinkClick} component={'a'} sx={{ textAlign: 'center' }} href={`/`}>
                    Home
                 </MenuItem>
               {settings.map((setting) => (
-                <MenuItem component={'a'} sx={{ textAlign: 'center' }} key={setting} href={`#${setting.toLowerCase()}`}>
+                <MenuItem component={'a'} sx={{ textAlign: 'center' }} key={setting} href={`/${setting.toLowerCase()}`}>
                     {setting}
                 </MenuItem>
               ))}

@@ -5,11 +5,11 @@ import { Skeleton,Box } from '@mui/material'
 export const ContentWrapper = (
     {
       children,
-      pageText
+
      
     }:{
       children: React.ReactNode;
-      pageText:string
+
     }
 ) => {
     const [contentHeight,setContentHeight]=useState<number>(0)
@@ -40,6 +40,6 @@ export const ContentWrapper = (
       
     },[contentHeight])
   return (
-    <>{contentHeight?<Box minHeight={contentHeight} id={pageText.toLowerCase()}> {children}</Box>:<Skeleton sx={{ bgcolor: 'grey.600' }} variant="rectangular" width={'100vw'} height={'100vh'} />}</>
+    <main id='main' className="app">{contentHeight?<Box minHeight={contentHeight}> {children}</Box>:<Skeleton sx={{ bgcolor: 'grey.600' }} variant="rectangular" width={'100vw'} height={'100vh'} />}</main>
   )
 }
