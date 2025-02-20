@@ -1,7 +1,6 @@
 
 import React from 'react'
 import { Container,Box,Typography, ThemeProvider } from '@mui/material'
-import ProjectsTab from './ProjectsTab'
 import TypeWritter from '@components/TypeWritter'
 
 import dancingScript from '@styles/dancingScript'
