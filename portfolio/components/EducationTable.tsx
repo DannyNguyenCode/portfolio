@@ -10,23 +10,27 @@ import {
     styled,
     tableCellClasses 
 } from '@mui/material/';
+
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
       backgroundColor: theme.palette.common.white,
       color: theme.palette.primary.dark,
-    },
-    [`&.${tableCellClasses.body}`]: {
-      fontSize: 14,
-    },
+      fontSize: 22,
+      fontWeight:'500'
+    }
 }));
 const StyledTableCellColorWhite = styled(TableCell)(({ theme }) => ({
 
         color: theme.palette.common.white,
+        fontSize: 16,
+        fontWeight:'500'
       
 }));
 const StyledTableCellColorPrimaryDark = styled(TableCell)(({ theme }) => ({
 
-    color: theme.palette.primary.dark,
+        color: theme.palette.primary.dark,
+        fontSize: 16,
+        fontWeight:'500'
   
 }));
 const StyledTableRow = styled(TableRow)(({ theme }) => ({
