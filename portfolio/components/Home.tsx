@@ -41,7 +41,7 @@ const Home = () => {
        
             <Box sx={{height:'fit-content', position:'relative',width:'100%', padding:{xs:0,md:'1em'} }}  >
               <Stack width={'inherit'} direction={'row'} display={'flex'} justifyContent={'space-evenly'} spacing={2}>
-                <HomeDialog title='Resume' link='https://res.cloudinary.com/dblayhcrg/image/upload/v1728996558/Resume_akrblz.pdf' downloadLink={`https://res.cloudinary.com/dblayhcrg/image/upload/fl_attachment:Gia_Bao_Nguyen_Resume/v1728996558/Resume_akrblz.pdf`}/>
+                <HomeDialog title='Resume' link='https://res.cloudinary.com/dblayhcrg/image/upload/v1740109798/Resume_gn4srr.pdf' downloadLink={`https://res.cloudinary.com/dblayhcrg/image/upload/fl_attachment:Gia_Bao_Nguyen_Resume/v1728996558/Resume_akrblz.pdf`}/>
                 <HomeDialog title='Cover Letter' link='https://res.cloudinary.com/dblayhcrg/image/upload/v1728996557/CoverLetter_jr0sxe.pdf' downloadLink={`https://res.cloudinary.com/dblayhcrg/image/upload/fl_attachment:Gia_Bao_Nguyen_CoverLetter/v1728996557/CoverLetter_jr0sxe.pdf`}/>
                 <Button variant="contained" href='https://github.com/DannyNguyenCode' target='_blank' rel='noopener noreferrer'>Github</Button>
               </Stack>
