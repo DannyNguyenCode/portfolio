@@ -23,7 +23,7 @@ const Home = () => {
             <Box sx={{ padding: { xs: '1em' }, maxWidth: matches ? '55%' : '90%' }}>
               <ThemeProvider theme={theme}>
                 <Typography sx={{ textAlign: 'left', fontSize: '1.5rem' }} color='black'>
-                  I'm a Junior Web Developer with 1 year of hands-on experience building full-stack applications using React, Node.js, Supabase, and Flask. I specialize in creating responsive front-ends and scalable back-end APIs that prioritize user experience and clean architecture. With a background in computer programming and a passion for solving real-world problems, I’ve contributed to projects ranging from e-commerce sites to custom database-driven tools. I'm currently focused on mastering modern back-end workflows and eager to join a team where I can continue learning, shipping quality code, and delivering real value.
+                  I'm a Junior Web Developer with 1 year of hands-on experience building full-stack applications using React, Node.js, Supabase, and Flask. I specialize in creating responsive front-ends and scalable back-end APIs that prioritize user experience and clean architecture. With a background in computer programming and a passion for solving real-world problems, I've contributed to projects ranging from e-commerce sites to custom database-driven tools. I'm currently focused on mastering modern back-end workflows and eager to join a team where I can continue learning, shipping quality code, and delivering real value.
                 </Typography>
               </ThemeProvider>
             </Box>
