@@ -19,7 +19,7 @@ const ProjectCard = ({projects}:{projects:Project[]}) => {
         {projects.map((project,i)=>{
             return(
                 <Grid2 key={i} size={{xs:12,md:12}}>
-                    <Card  variant='outlined'>
+                    <Card sx={{bgcolor:''}} variant='outlined'>
                         <CardContent>
                             <Typography variant="h5" component="div">
                               {project.title}

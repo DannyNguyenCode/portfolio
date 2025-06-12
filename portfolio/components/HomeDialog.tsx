@@ -12,24 +12,24 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 
 export interface SimpleDialogProps {
   open: boolean;
-  link:string;
-  downloadLink:string;
+  link: string;
+  downloadLink: string;
 }
-const HomeDialog = ({link,title,downloadLink}:{link:string,title:string,downloadLink:string}) => {
-    const theme = useTheme();
-    const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
+const HomeDialog = ({ link, title, downloadLink, isButton = true }: { link: string, title: string, downloadLink: string, isButton?: boolean }) => {
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
 
-function SimpleDialog(props: SimpleDialogProps) {
-  const {  open,link,downloadLink } = props;
+  function SimpleDialog(props: SimpleDialogProps) {
+    const { open, link, downloadLink } = props;
 
-  const handleClose = () => {
-    setOpen(false);
-  };
+    const handleClose = () => {
+      setOpen(false);
+    };
 
 
 
-  return (
-    <Dialog fullScreen={fullScreen} onClose={handleClose} open={open}>
+    return (
+      <Dialog fullScreen={fullScreen} onClose={handleClose} open={open}>
         <DialogTitle sx={{ m: 0, p: 2 }} >
           {title} Preview
         </DialogTitle>
@@ -45,43 +45,54 @@ function SimpleDialog(props: SimpleDialogProps) {
         >
           <CloseIcon />
         </IconButton>
-        <DialogContent sx={{padding:{xs:0,md:'16px 24px'}}} className='content' dividers>
-            <Image src={link.replace('pdf', 'png')} alt='resume' width={500} height={500}/>
+        <DialogContent sx={{ padding: { xs: 0, md: '16px 24px' } }} className='content' dividers>
+          <Image src={link.replace('pdf', 'png')} alt='resume' width={500} height={500} />
         </DialogContent>
         <DialogActions>
-            <Stack width={'100%'} sx={{margin:'1em'}} direction={'row'} spacing={2} display={'flex'} justifyContent={'space-around'}>
-                <Button variant="contained" download href={downloadLink}>
-                    Download
-                </Button>
-                <Button variant="contained" target='_blank' rel='noopener noreferrer' href={link}>
-                    Open New Tab
-                </Button>
-            </Stack>
+          <Stack width={'100%'} sx={{ margin: '1em' }} direction={'row'} spacing={2} display={'flex'} justifyContent={'space-around'}>
+            <Button variant="contained" download href={downloadLink}>
+              Download
+            </Button>
+            <Button variant="contained" target='_blank' rel='noopener noreferrer' href={link}>
+              Open New Tab
+            </Button>
+          </Stack>
         </DialogActions>
-    </Dialog>
-  );
-}
+      </Dialog>
+    );
+  }
 
-    const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(false);
 
 
-    const handleClickOpen = () => {
-        setOpen(true);
-    };
-  
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const showAsButton = () => {
+    if (isButton) {
+      return (
+        <Button size='large' variant="contained" onClick={handleClickOpen}>
+          {title}
+        </Button>)
+    } else {
+      return (
+        <Button sx={{ color: 'white', textTransform: 'none', textAlign: 'left', padding: 0 }} size='large' variant="text" onClick={handleClickOpen}>
+          {title}
+        </Button>)
+    }
+  }
 
   return (
     <div>
+      {showAsButton()}
 
-        <Button variant="contained" onClick={handleClickOpen}>
-            {title}
-        </Button>
 
-        <SimpleDialog
-          open={open}
-          link={link}
-          downloadLink={downloadLink}
-        />
+      <SimpleDialog
+        open={open}
+        link={link}
+        downloadLink={downloadLink}
+      />
     </div>
   )
 }

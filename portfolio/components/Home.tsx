@@ -1,5 +1,5 @@
 'use client'
-import { Box, Grid2, Stack, ThemeProvider, Typography,responsiveFontSizes,createTheme, Button } from '@mui/material'
+import { Box, Grid2, Stack, ThemeProvider, Typography, responsiveFontSizes, createTheme, Button, useMediaQuery } from '@mui/material'
 import React from 'react'
 
 import TypeWritter from './TypeWritter';
@@ -8,42 +8,30 @@ import dancingScript from '@styles/dancingScript'
 const Home = () => {
   let theme = createTheme();
   theme = responsiveFontSizes(theme);
-  return (  
-    <Box display={'flex'} textAlign={'center'}alignItems={'center'} justifyContent={'center'} width={'100%'} minHeight={'inherit'} bgcolor={'primary.main'}>
+  const matches = useMediaQuery(theme.breakpoints.up('sm'));
+  return (
+    <Box marginY={matches ? '' : '2rem'} display={'flex'} textAlign={'center'} alignItems={'center'} justifyContent={'center'} width={'100%'} minHeight={'inherit'} bgcolor={''}>
       <Grid2 width={'inherit'} container>
-        <Grid2 display={'flex'} justifyContent={'center'} size={{xs:12,md:12}}>
+        <Grid2 display={'flex'} justifyContent={'center'} size={{ xs: 12, md: 12 }}>
           <Stack alignItems={'center'} textAlign={'center'} direction={'column'} spacing={2}>
-              <TypeWritter>
-                <ThemeProvider theme={dancingScript}>
-                  <Typography textAlign={'center'} color='white' variant='h4'>Gia Bao Nguyen</Typography>
-                </ThemeProvider>
-              </TypeWritter>
-             
-              <Box sx={{padding:{xs:'1em'}}}>
-                <ThemeProvider theme={theme}>
-                    <Typography sx={{textAlign:'left'}} maxWidth={800} color='white'>
-                          Junior Developer with 1 year experience developing within React and Nodejs for an e-commerce website.
-                    </Typography>
-                    <Typography sx={{textAlign:'left'}} maxWidth={800} color='white'>
-                          An enthusiast for responsive designs, utilizing libraries such as Material UI to enhance user experience.
-                    </Typography>
-                    <Typography sx={{textAlign:'left'}} maxWidth={800} color='white'>
-                          A computer programmer graduate with front-end, back-end, and database skills. 
-                    </Typography>
-                    <Typography sx={{textAlign:'left'}} maxWidth={800} color='white'>
-                          Enjoys creating websites that enhances user engagement.
-                    </Typography>
-                    <Typography sx={{textAlign:'left'}} maxWidth={800} color='white'>
-                          Finding creative solutions to difficult problems.
-                    </Typography>
-                </ThemeProvider>
-              </Box>
-       
-            <Box sx={{height:'fit-content', position:'relative',width:'100%', padding:{xs:0,md:'1em'} }}  >
+            <TypeWritter>
+              <ThemeProvider theme={dancingScript}>
+                <Typography textAlign={'center'} color='black' variant='h3'>Gia Bao Nguyen</Typography>
+              </ThemeProvider>
+            </TypeWritter>
+
+            <Box sx={{ padding: { xs: '1em' }, maxWidth: matches ? '55%' : '90%' }}>
+              <ThemeProvider theme={theme}>
+                <Typography sx={{ textAlign: 'left', fontSize: '1.5rem' }} color='black'>
+                  I am a Junior Web Developer with 1 year of hands-on experience building full-stack applications using React, Node.js, Supabase, and Flask. I specialize in creating responsive front-ends and scalable back-end APIs that prioritize user experience and clean architecture. With a background in computer programming and a passion for solving real-world problems, I have contributed to projects ranging from e-commerce sites to custom database-driven tools. I am currently focused on mastering modern back-end workflows and eager to join a team where I can continue learning, shipping quality code, and delivering real value.
+                </Typography>
+              </ThemeProvider>
+            </Box>
+
+            <Box sx={{ height: 'fit-content', position: 'relative', width: '100%', padding: { xs: 0, md: '1em' } }}  >
               <Stack width={'inherit'} direction={'row'} display={'flex'} justifyContent={'space-evenly'} spacing={2}>
-                <HomeDialog title='Resume' link='https://res.cloudinary.com/dblayhcrg/image/upload/v1740109798/Resume_gn4srr.pdf' downloadLink={`https://res.cloudinary.com/dblayhcrg/image/upload/fl_attachment:Gia_Bao_Nguyen_Resume/v1740109798/Resume_gn4srr.pdf`}/>
-                <HomeDialog title='Cover Letter' link='https://res.cloudinary.com/dblayhcrg/image/upload/v1728996557/CoverLetter_jr0sxe.pdf' downloadLink={`https://res.cloudinary.com/dblayhcrg/image/upload/fl_attachment:Gia_Bao_Nguyen_CoverLetter/v1728996557/CoverLetter_jr0sxe.pdf`}/>
-                <Button variant="contained" href='https://github.com/DannyNguyenCode' target='_blank' rel='noopener noreferrer'>Github</Button>
+                <HomeDialog title='Resume' link='https://res.cloudinary.com/dblayhcrg/image/upload/v1749743542/Resume_iu4keg.pdf' downloadLink={`https://res.cloudinary.com/dblayhcrg/image/upload/fl_attachment:Gia_Bao_Nguyen_Resume/v1749743542/Resume_iu4keg.pdf`} />
+                <Button size='large' variant="contained" href='https://github.com/DannyNguyenCode' target='_blank' rel='noopener noreferrer'>Github</Button>
               </Stack>
             </Box>
           </Stack>
