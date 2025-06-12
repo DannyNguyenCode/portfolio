@@ -93,15 +93,15 @@ const Projects = () => {
 
   ]
   return (
-    <Box minHeight={'inherit'} bgcolor={'primary.main'}>
+    <Box minHeight={'inherit'} bgcolor={''}>
       <Container sx={{padding:'1em', minHeight:'inherit'}} maxWidth='xl'>
       <Box
           width={'100%'}
-          sx={{textAlign:'center', display:'flex', justifyContent:'center', marginBottom:'1em', marginTop:'1rem'}}
+          sx={{textAlign:'center', display:'flex', justifyContent:'center', marginY:'1rem'}}
         >
             <TypeWritter>
                 <ThemeProvider theme={dancingScript}>
-                  <Typography textAlign={'center'} color='white' variant='h4'>Projects</Typography>
+                  <Typography textAlign={'center'} color='black' variant='h3'>Projects</Typography>
                 </ThemeProvider>
             </TypeWritter>
         </Box>

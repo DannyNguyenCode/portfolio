@@ -62,7 +62,7 @@ const Employment = () => {
         >
             <TypeWritter>
                 <ThemeProvider theme={dancingScript}>
-                  <Typography textAlign={'center'} color='black' variant='h4'>Employment</Typography>
+                  <Typography textAlign={'center'} color='black' variant='h3'>Employment</Typography>
                 </ThemeProvider>
             </TypeWritter>
         </Box>

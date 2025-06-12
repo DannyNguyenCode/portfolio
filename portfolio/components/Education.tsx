@@ -8,7 +8,7 @@ import TypeWritter from '@components/TypeWritter'
 import dancingScript from '@styles/dancingScript'
 const Education = () => {
   return (
-    <Box sx={{minHeight:'inherit', justifyContent:'center',alignItems:'center',display:'flex'}}  bgcolor={'primary.main'}>
+    <Box sx={{minHeight:'inherit', justifyContent:'center',alignItems:'center',display:'flex'}}  bgcolor={''}>
         <Container maxWidth='xl'>
 
             <Box
@@ -17,7 +17,7 @@ const Education = () => {
             >
               <TypeWritter>
                   <ThemeProvider theme={dancingScript}>
-                    <Typography textAlign={'center'} color='white' variant='h4'>Education</Typography>
+                    <Typography textAlign={'center'} color='black' variant='h3'>Education</Typography>
                   </ThemeProvider>
               </TypeWritter>
             </Box>
