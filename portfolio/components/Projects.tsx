@@ -33,6 +33,30 @@ const Projects = () => {
         hostLink: 'https://portfolio-pyepmszhp-dannynguyencodes-projects.vercel.app/'
       },
       {
+        title: 'Python API',
+        desc: 'CRUD operations on products and users, utilizing Python',
+        features: [
+          {
+            primary: 'Flask',
+            secondary: 'Used to create routes/endpoints to enable requests and responses'
+          },
+          {
+            primary: 'SQLAlchemy',
+            secondary: 'ORM package to execute statements to database utilizing insert, update, select, and delete'
+          },
+          {
+            primary: 'Flask-Smorest/Marshmallow',
+            secondary: 'Integrate Swagger UI into the project for documentation and testing'
+          },
+          {
+            primary: 'Supabase',
+            secondary: 'Database website utilizing Postgres to store, read, and write'
+          }
+        ],
+        link: "https://github.com/DannyNguyenCode/shoppingcart_api",
+        hostLink: 'https://shoppingcart-api.vercel.app/docs'
+      },
+      {
         title: 'Pet200',
         desc: `Centralized place for pet caretakers to upload pet's profile`,
         features: [
@@ -65,34 +89,7 @@ const Projects = () => {
         link: "https://github.com/DannyNguyenCode/pet200",
         hostLink: ''
       },
-      {
-        title: 'API',
-        desc: 'CRUD operations on products and users, utilizing Python',
-        features: [
-          {
-            primary: 'Python',
-            secondary: 'Programming language'
-          },
-          {
-            primary: 'Flask',
-            secondary: 'Used to create routes/endpoints to enable requests and responses'
-          },
-          {
-            primary: 'SQLAlchemy',
-            secondary: 'ORM package to execute statements to database utilizing insert, update, select, and delete'
-          },
-          {
-            primary: 'Flask-RestX',
-            secondary: 'Integrate Swagger UI into the project for documentation and testing'
-          },
-          {
-            primary: 'Supabase',
-            secondary: 'Database website utilizing Postgres to store, read, and write'
-          }
-        ],
-        link: "https://github.com/DannyNguyenCode/shoppingcart_api",
-        hostLink: ''
-      },
+
       {
         title: 'Snake Game',
         desc: `Basic Arcade Snake Game on Android`,
