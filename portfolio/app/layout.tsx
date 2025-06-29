@@ -4,6 +4,7 @@ import "./globals.css";
 import { ContentWrapper } from "@components/ContentWrapper";
 import Nav from "@components/Nav";
 import Footer from "@components/Footer";
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata: Metadata = {
   title: "Danny Nguyen's Portfolio",
@@ -19,11 +20,12 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <AppRouterCacheProvider>
-          <Nav/>
-            <ContentWrapper>
-              {children}
-            </ContentWrapper>
-          <Footer/>
+          <Nav />
+          <ContentWrapper>
+            {children}
+            <Analytics />
+          </ContentWrapper>
+          <Footer />
         </AppRouterCacheProvider>
       </body>
     </html>
