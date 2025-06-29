@@ -9,30 +9,6 @@ const Projects = () => {
   const projects =
     [
       {
-        title: 'Portfolio',
-        desc: 'Visualize resume for desktop and mobile',
-        features: [
-          {
-            primary: 'Material UI',
-            secondary: 'Responsive design components for each page'
-          },
-          {
-            primary: 'React and Material UI',
-            secondary: 'Progress bar to show percent label inside bar - createPortal'
-          },
-          {
-            primary: 'Javascript',
-            secondary: 'Height for each page set on resize'
-          },
-          {
-            primary: 'NextJS',
-            secondary: 'Layout and routing optimized'
-          }
-        ],
-        link: 'https://github.com/DannyNguyenCode/portfolio',
-        hostLink: 'https://portfolio-pyepmszhp-dannynguyencodes-projects.vercel.app/'
-      },
-      {
         title: 'Python API',
         desc: 'CRUD operations on products and users, utilizing Python',
         features: [
@@ -50,12 +26,55 @@ const Projects = () => {
           },
           {
             primary: 'Supabase',
-            secondary: 'Database website utilizing Postgres to store, read, and write'
+            secondary: 'Database SQL utilizing Postgres to store, read, and write'
           }
         ],
         link: "https://github.com/DannyNguyenCode/shoppingcart_api",
         hostLink: 'https://shoppingcart-api.vercel.app/docs'
       },
+      {
+        title: 'Pokedex',
+        desc: `View the first 150 Pokemons and add them to your collection`,
+        features: [
+
+          {
+            primary: 'Angular 20+',
+            secondary: 'Utilizing the framework to build components and services and making use of signal, input, and injections to manage data'
+          },
+          {
+            primary: 'Angular Material',
+            secondary: 'Implemented components (Grid List, Cards, Menu, Snackbar and Buttons) and themes for responsive design'
+          },
+          {
+            primary: 'Angular Services',
+            secondary: 'Injected services into components to make calls to third party API and my Pokedex API and authenticate users'
+          },
+          {
+            primary: 'Data Binding',
+            secondary: 'Bind data to components using signal and input'
+          }
+
+        ],
+        link: "https://github.com/DannyNguyenCode/pokedex",
+        hostLink: 'https://pokedex-beige-alpha-86.vercel.app/'
+      },
+      {
+        title: 'Pokedex API',
+        desc: 'CRUD operations on users and Pokemons, utilizing Python',
+        features: [
+          {
+            primary: 'Flask',
+            secondary: 'Used to create routes/endpoints to enable requests and responses'
+          },
+          {
+            primary: 'Firebase',
+            secondary: 'Utilizing Cloud Firestore Admin SDK to store, read, and write to the NoSQL database'
+          }
+        ],
+        link: "https://github.com/DannyNguyenCode/pokedexapi",
+        hostLink: 'https://pokedexapi-seven.vercel.app/'
+      },
+
       {
         title: 'Pet200',
         desc: `Centralized place for pet caretakers to upload pet's profile`,
@@ -87,33 +106,31 @@ const Projects = () => {
 
         ],
         link: "https://github.com/DannyNguyenCode/pet200",
-        hostLink: ''
+        hostLink: 'https://pet200.vercel.app/'
       },
-
       {
-        title: 'Snake Game',
-        desc: `Basic Arcade Snake Game on Android`,
+        title: 'Portfolio',
+        desc: 'Visualize resume for desktop and mobile',
         features: [
           {
-            primary: 'Flutter',
-            secondary: 'Built-in widgets to create layouts and present data'
+            primary: 'Material UI',
+            secondary: 'Responsive design components for each page'
           },
           {
-            primary: 'Dart',
-            secondary: 'Programming language used to integrate movement, determine state of game, and create classes'
+            primary: 'React and Material UI',
+            secondary: 'Progress bar to show percent label inside bar - createPortal'
           },
           {
-            primary: 'Flame Engine',
-            secondary: 'Ready to ship widgets which include controlling character, collision logic, and create the board'
+            primary: 'Javascript',
+            secondary: 'Height for each page set on resize'
           },
           {
-            primary: 'Firebase',
-            secondary: 'Authentication, Authorization, and database integration'
-          },
-
+            primary: 'NextJS',
+            secondary: 'Layout and routing optimized'
+          }
         ],
-        link: "https://github.com/DannyNguyenCode/flutter_snake",
-        hostLink: ''
+        link: 'https://github.com/DannyNguyenCode/portfolio',
+        hostLink: 'https://portfolio-pyepmszhp-dannynguyencodes-projects.vercel.app/'
       },
 
     ]

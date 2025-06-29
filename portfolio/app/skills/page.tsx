@@ -241,6 +241,18 @@ const SkillsPage = () => {
                         </Box>
 
                     </Grid2>
+                    {/* <Box paddingY={{ xs: '1rem', md: 0 }} minHeight={'inherit'}>
+                        <Container sx={{ minHeight: 'inherit' }} maxWidth='xl'> */}
+
+                    <Grid2 display={'flex'} justifyContent={'center'} width={'inherit'} minHeight={'inherit'} size={{ xs: 12, md: 6 }}>
+                        <Grid2 alignItems="center" width={'100%'} minHeight={'inherit'} spacing={2} container>
+                            <Skills />
+
+                        </Grid2>
+                    </Grid2>
+                    {/* 
+                        </Container>
+                    </Box> */}
                     <Grid2 display={'flex'} justifyContent={'center'} alignItems={'center'} size={{ xs: 12, md: 6 }}>
                         <Paper elevation={1} sx={{ marginX: '1.5em', width: 'fit-content', paddingBottom: '0.5em', maxHeight: '300px', overflow: 'auto' }}>
                             <ListSubheader><ThemeProvider theme={responsiveTheme}><Typography sx={{ padding: '0.5em' }} variant='h6'>All users currently in database</Typography></ThemeProvider></ListSubheader>
@@ -261,11 +273,7 @@ const SkillsPage = () => {
                     </Grid2>
 
 
-                    <Grid2 width={'inherit'} minHeight={'inherit'} size={{ xs: 12, md: 12 }}>
 
-                        <Skills />
-
-                    </Grid2>
                 </Grid2>
             </Container>
         </Box>
