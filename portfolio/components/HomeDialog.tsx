@@ -50,7 +50,7 @@ const HomeDialog = ({ link, title, downloadLink, isButton = true }: { link: stri
         </DialogContent>
         <DialogActions>
           <Stack width={'100%'} sx={{ margin: '1em' }} direction={'row'} spacing={2} display={'flex'} justifyContent={'space-around'}>
-            <Button variant="contained" download href={downloadLink}>
+            <Button aria-label='download button' variant="contained" download href={downloadLink}>
               Download
             </Button>
             <Button variant="contained" target='_blank' rel='noopener noreferrer' href={link}>
@@ -77,7 +77,7 @@ const HomeDialog = ({ link, title, downloadLink, isButton = true }: { link: stri
         </Button>)
     } else {
       return (
-        <Button sx={{ color: 'white', textTransform: 'none', textAlign: 'left', padding: 0 }} size='large' variant="text" onClick={handleClickOpen}>
+        <Button aria-label='Handles modal open on click' sx={{ color: 'white', textTransform: 'none', textAlign: 'left', padding: 0 }} size='large' variant="text" onClick={handleClickOpen}>
           {title}
         </Button>)
     }

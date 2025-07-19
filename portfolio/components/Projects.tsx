@@ -9,8 +9,8 @@ const Projects = () => {
   const projects =
     [
       {
-        title: 'Python API',
-        desc: 'CRUD operations on products and users, utilizing Python',
+        title: 'Shopping Cart API',
+        desc: 'A RESTful backend built to simulate a full e-commerce system with secure product, user, and order management.',
         features: [
           {
             primary: 'Flask',
@@ -33,8 +33,8 @@ const Projects = () => {
         hostLink: 'https://shoppingcart-api.vercel.app/docs'
       },
       {
-        title: 'Pokedex',
-        desc: `View the first 150 Pokemons and add them to your collection`,
+        title: 'Pokédex Angular App',
+        desc: `A responsive, searchable Pokédex built with Angular 15, offering dynamic data streams and custom route handling.`,
         features: [
 
           {
@@ -76,8 +76,8 @@ const Projects = () => {
       },
 
       {
-        title: 'Pet200',
-        desc: `Centralized place for pet caretakers to upload pet's profile`,
+        title: 'Pet200 (Full-Stack Adoption Platform)',
+        desc: `A full-stack platform designed to match prospective pet owners with adoptable animals, featuring secure auth and image uploads.`,
         features: [
           {
             primary: 'AuthJS',
@@ -110,7 +110,7 @@ const Projects = () => {
       },
       {
         title: 'Portfolio',
-        desc: 'Visualize resume for desktop and mobile',
+        desc: 'A fast-loading, mobile-friendly portfolio site to showcase my development work, built with Next.js and deployed via Vercel.',
         features: [
           {
             primary: 'Material UI',
@@ -130,7 +130,7 @@ const Projects = () => {
           }
         ],
         link: 'https://github.com/DannyNguyenCode/portfolio',
-        hostLink: 'https://portfolio-pyepmszhp-dannynguyencodes-projects.vercel.app/'
+        hostLink: 'https://portfolio-black-two-97.vercel.app/'
       },
 
     ]

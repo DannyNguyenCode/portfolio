@@ -44,8 +44,8 @@ const ProjectCard = ({ projects }: { projects: Project[] }) => {
 
                             </CardContent>
                             <CardActions>
-                                <Button sx={{ textTransform: 'none' }} href={project.link} target='_blank' rel='noopener noreferrer'>Link to Github Repository</Button>
-                                {project.hostLink ? <Button sx={{ textTransform: 'none' }} href={project.hostLink} target='_blank' rel='noopener noreferrer'>Link Website</Button> : <></>}
+                                <Button sx={{ textTransform: 'none' }} href={project.link} target='_blank' rel='noopener noreferrer'>View on Github</Button>
+                                {project.hostLink ? <Button sx={{ textTransform: 'none' }} href={project.hostLink} target='_blank' rel='noopener noreferrer'>Live Demo</Button> : <></>}
                             </CardActions>
                         </Card>
                     </Grid2>

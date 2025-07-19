@@ -26,13 +26,13 @@ const Footer = () => {
               <Grid2 size={{ xs: 12, md: 6 }}>
                 <Stack justifyContent={'center'} alignItems={'center'} spacing={2} direction={{ xs: 'row', md: 'column' }}>
                   <Typography sx={{ padding: { xs: '8px', md: '0' }, display: "flex", alignItems: "center" }}>
-                    <Box sx={{ display: { xs: 'none', md: "flex" }, minWidth: 100 }} component={'span'}><Link color='common.white' underline='none' href='https://github.com/DannyNguyenCode' target='_blank' rel='noopener noreferrer'>Github</Link></Box>
+                    <Box sx={{ display: { xs: 'none', md: "flex" }, minWidth: 100 }} component={'span'}><Link aria-label='Github link opens on new tab' color='common.white' underline='none' href='https://github.com/DannyNguyenCode' target='_blank' rel='noopener noreferrer'>Github</Link></Box>
                     <IconButton href='https://github.com/DannyNguyenCode' target='_blank' rel='noopener noreferrer' edge="end">
                       <GitHubIcon />
                     </IconButton>
                   </Typography>
                   <Typography sx={{ padding: { xs: '8px', md: '0' }, display: "flex", alignItems: "center" }}>
-                    <Box sx={{ display: { xs: 'none', md: "flex" }, minWidth: 100 }} component={'span'}><Link color='common.white' underline='none' href='https://www.linkedin.com/in/gia-bao-danny-nguyen/' target='_blank' rel='noopener noreferrer'>LinkedIn</Link></Box>
+                    <Box sx={{ display: { xs: 'none', md: "flex" }, minWidth: 100 }} component={'span'}><Link aria-label='LinkedIn profile opens on new tab' color='common.white' underline='none' href='https://www.linkedin.com/in/gia-bao-danny-nguyen/' target='_blank' rel='noopener noreferrer'>LinkedIn</Link></Box>
                     <IconButton href='https://www.linkedin.com/in/gia-bao-danny-nguyen/' target='_blank' rel='noopener noreferrer' edge="end">
                       <LinkedInIcon />
                     </IconButton>
