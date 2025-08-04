@@ -9,6 +9,39 @@ const Projects = () => {
   const projects =
     [
       {
+        title: 'Pokémon Trading Card Game (Full-Stack Multiplayer App)',
+        desc: 'A turn-based online battle simulator inspired by the Pokémon TCG, supporting real-time 1v1 gameplay, deck building, and secure role-based access.',
+        features: [
+          {
+            primary: 'Next.js + Framer Motion',
+            secondary: 'Built a smooth, interactive UI for selecting, attacking, and evolving cards in real time'
+          },
+          {
+            primary: 'Node.js + Socket.IO',
+            secondary: 'Custom multiplayer server with real-time event handling for game turns and state sync'
+          },
+          {
+            primary: 'Python Flask API',
+            secondary: 'Syncs PokéAPI data to Supabase and handles backend route logic'
+          },
+          {
+            primary: 'Auth.js + Supabase',
+            secondary: 'Implemented secure JWT-based login with protected routes and role validation'
+          },
+          {
+            primary: 'Monorepo Architecture',
+            secondary: 'Decoupled game server, UI, and API layers for maintainability and scalability'
+          },
+          {
+            primary: 'Vercel + Render Deployment',
+            secondary: 'Frontend hosted on Vercel; backend and WebSocket server deployed on Render with CORS handling'
+          }
+        ],
+        link: 'https://github.com/DannyNguyenCode/pokemon-tradingcardgame',
+        hostLink: 'https://pokemon-tradingcardgame.vercel.app'
+      },
+
+      {
         title: 'Shopping Cart API',
         desc: 'A RESTful backend built to simulate a full e-commerce system with secure product, user, and order management.',
         features: [
