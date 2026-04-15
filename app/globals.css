@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* The Digital Hearth — design tokens */
+  --color-error-container: #f95630;
+  --color-tertiary-fixed-dim: #e5dbd1;
+  --color-secondary-dim: #00557c;
+  --color-secondary-fixed: #a5d8ff;
+  --color-primary: #8f4800;
+  --color-surface-container: #f9e5d4;
+  --color-on-surface: #372d24;
+  --color-surface-container-high: #f4dfce;
+  --color-on-error: #ffefec;
+  --color-inverse-primary: #fe9f55;
+  --color-surface-container-highest: #efd9c7;
+  --color-on-secondary-container: #004c6f;
+  --color-on-tertiary: #fbf1e6;
+  --color-surface: #fff5ee;
+  --color-primary-fixed-dim: #ee924a;
+  --color-error: #b02500;
+  --color-inverse-surface: #140d06;
+  --color-on-secondary: #e9f4ff;
+  --color-outline: #827469;
+  --color-on-surface-variant: #66594e;
+  --color-background: #fff5ee;
+  --color-secondary-fixed-dim: #83cbff;
+  --color-error-dim: #b92902;
+  --color-tertiary: #615b52;
+  --color-inverse-on-surface: #a99a8e;
+  --color-tertiary-fixed: #f3e9de;
+  --color-on-tertiary-fixed: #49443c;
+  --color-primary-fixed: #fe9f55;
+  --color-on-primary-container: #552900;
+  --color-surface-tint: #8f4800;
+  --color-primary-dim: #7d3f00;
+  --color-on-background: #372d24;
+  --color-on-tertiary-container: #5c564e;
+  --color-tertiary-dim: #554f47;
+  --color-surface-container-low: #ffeee0;
+  --color-surface-container-lowest: #ffffff;
+  --color-secondary: #00618d;
+  --color-surface-variant: #efd9c7;
+  --color-tertiary-container: #f3e9de;
+  --color-on-secondary-fixed-variant: #00567d;
+  --color-surface-dim: #e7d1be;
+  --color-on-error-container: #520c00;
+  --color-surface-bright: #fff5ee;
+  --color-on-secondary-fixed: #003853;
+  --color-on-primary-fixed: #331600;
+  --color-outline-variant: #baaa9d;
+  --color-on-primary-fixed-variant: #623000;
+  --color-on-tertiary-fixed-variant: #666057;
+  --color-primary-container: #fe9f55;
+  --color-on-primary: #fff0e8;
+  --color-secondary-container: #a5d8ff;
+
+  --radius-DEFAULT: 1rem;
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+
+  --font-headline: var(--font-plus-jakarta), "Plus Jakarta Sans", ui-sans-serif,
+    system-ui, sans-serif;
+  --font-body: var(--font-be-vietnam), "Be Vietnam Pro", ui-sans-serif, system-ui,
+    sans-serif;
+  --font-label: var(--font-plus-jakarta), "Plus Jakarta Sans", ui-sans-serif,
+    system-ui, sans-serif;
+}
+
+.glass-nav {
+  background: rgba(255, 245, 238, 0.7);
+  backdrop-filter: blur(24px);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-headline);
+}
