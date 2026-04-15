@@ -27,8 +27,21 @@ export function PortfolioLikeModal({ open, notified, onClose }: Props) {
       if (e.key === "Escape") onClose();
     };
     window.addEventListener("keydown", onKey);
-    closeBtnRef.current?.focus();
-    return () => window.removeEventListener("keydown", onKey);
+    let cancelled = false;
+    let raf2 = 0;
+    const raf1 = requestAnimationFrame(() => {
+      if (cancelled) return;
+      raf2 = requestAnimationFrame(() => {
+        if (cancelled) return;
+        closeBtnRef.current?.focus({ preventScroll: true });
+      });
+    });
+    return () => {
+      cancelled = true;
+      window.removeEventListener("keydown", onKey);
+      cancelAnimationFrame(raf1);
+      cancelAnimationFrame(raf2);
+    };
   }, [open, onClose]);
 
   if (!open) return null;

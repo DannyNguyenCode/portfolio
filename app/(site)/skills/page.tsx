@@ -55,7 +55,7 @@ export default function SkillsPage() {
             alt="Flair, junior debugger, in a cozy home setting"
             fill
             className="object-cover"
-            priority
+            priority={true}
             sizes="(min-width: 1024px) 33vw, 0px"
           />
         </div>

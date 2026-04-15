@@ -51,7 +51,7 @@ export default function EmploymentPage() {
                   fill
                   className="object-cover"
                   sizes="16rem"
-                  priority
+                  priority={true}
                 />
               </div>
             </div>

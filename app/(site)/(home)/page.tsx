@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { ContactHeartFab } from "@/components/ContactHeartFab";
+import { HOME_LCP_IMAGE_SRC } from "@/lib/home-lcp";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -82,13 +83,13 @@ export default function HomePage() {
                     key={pet.name}
                     className="flex items-center gap-2 rounded-full bg-surface-container px-3 py-1.5"
                   >
-                    <div className="h-6 w-6 overflow-hidden rounded-full bg-surface-container-high">
+                    <div className="relative h-6 w-6 overflow-hidden rounded-full bg-surface-container-high">
                       <Image
                         src={pet.src}
                         alt={pet.name}
-                        width={24}
-                        height={24}
-                        className="h-full w-full object-cover"
+                        fill
+                        className="object-cover"
+                        sizes="24px"
                       />
                     </div>
                     <span className="text-xs font-semibold">{pet.name}</span>
@@ -101,13 +102,13 @@ export default function HomePage() {
                 className={`relative z-10 aspect-square overflow-hidden rounded-xl ${cardShadow}`}
               >
                 <Image
-                  src="/FlairHomepageHero.png"
+                  src={HOME_LCP_IMAGE_SRC}
                   alt="Flair at the Digital Hearth — warm home workspace"
-                  width={700}
-                  height={700}
-                  className="h-full w-full object-cover"
+                  fill
                   priority
-                  sizes="(min-width: 768px) 50vw, 100vw"
+                  fetchPriority="high"
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 576px, (min-width: 768px) min(576px, calc(50vw - 2.5rem)), calc(100vw - 2rem)"
                 />
               </div>
               <div className="absolute -bottom-10 -right-10 z-0 h-64 w-64 rounded-xl bg-primary-container/20" />
@@ -159,13 +160,13 @@ export default function HomePage() {
               className="flex flex-col justify-between rounded-xl bg-primary p-12 text-on-primary md:col-span-4"
             >
               <div>
-                <span className="mb-4 block font-label text-xs font-bold uppercase tracking-widest text-on-primary/70">
+                <span className="mb-4 block font-label text-xs font-bold uppercase tracking-widest text-on-primary">
                   Academic Foundation
                 </span>
                 <h2 className="mb-4 font-headline text-3xl font-bold">
                   Seneca Honors
                 </h2>
-                <p className="mb-6 text-lg leading-relaxed opacity-90">
+                <p className="mb-6 text-lg leading-relaxed text-on-primary">
                   Maintained a 3.8 GPA while pursuing excellence in Computer
                   Science at Seneca College.
                 </p>
@@ -236,14 +237,14 @@ export default function HomePage() {
                   </span>
                 </Link>
               </div>
-              <div className="h-64 flex-1 overflow-hidden rounded-lg md:h-auto">
+              <div className="relative h-64 flex-1 overflow-hidden rounded-lg md:h-auto md:min-h-64">
                 <Image
                   src="/EeveeTCGTeaser.png"
                   alt="Pokémon Trading Card Game style card teaser"
-                  width={600}
-                  height={400}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  sizes="(min-width: 768px) 40vw, 100vw"
+                  fill
+                  quality={72}
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="(min-width: 1024px) 360px, (min-width: 768px) min(360px, 42vw), calc(100vw - 2rem)"
                 />
               </div>
             </div>
@@ -255,23 +256,21 @@ export default function HomePage() {
           <div className="mx-auto flex max-w-7xl flex-col items-center gap-20 px-8 md:flex-row">
             <div className="order-2 flex-1 md:order-1">
               <div className="grid grid-cols-2 gap-4">
-                <div className="mt-12 h-64 overflow-hidden rounded-xl">
+                <div className="relative mt-12 h-64 overflow-hidden rounded-xl">
                   <Image
                     src={INSPIRED_IMGS[0]}
                     alt="Yellow Labrador in tall grass at golden hour"
-                    width={400}
-                    height={256}
-                    className="h-full w-full object-cover"
+                    fill
+                    className="object-cover"
                     sizes="(min-width: 768px) 25vw, 50vw"
                   />
                 </div>
-                <div className="h-64 overflow-hidden rounded-xl">
+                <div className="relative h-64 overflow-hidden rounded-xl">
                   <Image
                     src={INSPIRED_IMGS[1]}
                     alt="Silver tabby kitten sleeping curled in a chunky knit blanket"
-                    width={400}
-                    height={256}
-                    className="h-full w-full object-cover"
+                    fill
+                    className="object-cover"
                     sizes="(min-width: 768px) 25vw, 50vw"
                   />
                 </div>

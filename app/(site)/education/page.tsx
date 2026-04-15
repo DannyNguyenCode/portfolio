@@ -82,7 +82,7 @@ export default function EducationPage() {
               width={600}
               height={600}
               className="h-full w-full object-cover"
-              priority
+              priority={true}
               sizes="(min-width: 768px) 40vw, 100vw"
             />
           </div>

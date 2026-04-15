@@ -80,7 +80,7 @@ export function SiteHeader() {
           <div className="flex items-center gap-1.5">
             <span className="material-symbols-outlined text-primary">pets</span>
             <span
-              className="min-w-5 font-headline text-sm font-bold tabular-nums text-primary"
+              className="inline-flex min-w-10 justify-end font-headline text-sm font-bold tabular-nums text-primary"
               aria-live="polite"
               aria-label={
                 likeCount === null
@@ -91,13 +91,13 @@ export function SiteHeader() {
               {likeCount === null ? "…" : likeCount}
             </span>
           </div>
-          <div className="h-10 w-10 overflow-hidden rounded-full border-2 border-surface-container-highest">
+          <div className="relative h-10 w-10 overflow-hidden rounded-full border-2 border-surface-container-highest">
             <Image
               src={AVATAR_SRC}
               alt="Profile portrait"
-              width={40}
-              height={40}
-              className="h-full w-full object-cover"
+              fill
+              className="object-cover"
+              sizes="40px"
             />
           </div>
         </div>

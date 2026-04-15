@@ -8,7 +8,7 @@ export function SiteFooter() {
           <span className="font-headline text-lg font-semibold text-primary">
             The Digital Hearth
           </span>
-          <p className="font-body text-xs uppercase tracking-wider text-on-surface-variant">
+          <p className="font-body text-xs uppercase tracking-wider text-on-surface">
             © {new Date().getFullYear()} The Digital Hearth. Built with warmth
             and care.
           </p>
@@ -18,7 +18,7 @@ export function SiteFooter() {
             href="https://www.linkedin.com/in/gia-bao-danny-nguyen/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-on-surface-variant underline-offset-4 opacity-80 transition-opacity hover:text-primary hover:underline hover:opacity-100"
+            className="text-on-surface underline-offset-4 transition-colors hover:text-primary hover:underline"
           >
             LinkedIn
           </Link>
@@ -26,7 +26,7 @@ export function SiteFooter() {
             href="https://github.com/DannyNguyenCode"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-on-surface-variant underline-offset-4 opacity-80 transition-opacity hover:text-primary hover:underline hover:opacity-100"
+            className="text-on-surface underline-offset-4 transition-colors hover:text-primary hover:underline"
           >
             GitHub
           </Link>

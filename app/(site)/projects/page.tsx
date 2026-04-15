@@ -87,7 +87,7 @@ export default function ProjectsPage() {
               fill
               className="object-cover"
               sizes="12rem"
-              priority
+              priority={true}
             />
           </div>
         </div>
