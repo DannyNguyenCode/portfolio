@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Be_Vietnam_Pro } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
 import "./globals.css";
 
 const plusJakarta = Plus_Jakarta_Sans({
@@ -47,6 +49,7 @@ export default function RootLayout({
       </head>
       <body className="font-body flex min-h-screen flex-col bg-background text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container">
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
