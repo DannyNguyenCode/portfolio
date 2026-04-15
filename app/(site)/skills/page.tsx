@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 
+import { MaterialSymbol } from "@/components/MaterialSymbol";
+
 export const metadata: Metadata = {
   title: "Skills",
   description:
@@ -64,9 +66,7 @@ export default function SkillsPage() {
       <div className="flex flex-col gap-16 lg:flex-row">
         <section className="flex-2">
           <h2 className="mb-10 flex items-center gap-3 text-3xl font-bold">
-            <span className="material-symbols-outlined text-secondary">
-              terminal
-            </span>
+            <MaterialSymbol name="terminal" className="text-secondary" />
             Core Stack
           </h2>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
@@ -200,9 +200,10 @@ export default function SkillsPage() {
                   </span>
                 </div>
               </div>
-              <span className="material-symbols-outlined text-4xl opacity-50">
-                architecture
-              </span>
+              <MaterialSymbol
+                name="architecture"
+                className="text-4xl opacity-50"
+              />
             </div>
           </div>
         </section>
@@ -211,7 +212,7 @@ export default function SkillsPage() {
           <div className="sticky top-32 space-y-8">
             <div className="rounded-xl border-l-4 border-primary bg-surface-container p-8">
               <h2 className="mb-6 flex items-center gap-2 font-headline text-2xl font-bold">
-                <span className="material-symbols-outlined">favorite</span>
+                <MaterialSymbol name="favorite" />
                 The Support Crew
               </h2>
               <p className="mb-8 text-sm leading-relaxed text-on-surface-variant">

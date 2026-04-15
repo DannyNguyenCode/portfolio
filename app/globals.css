@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* The Digital Hearth — design tokens */
+  /* Theme tokens */
   --color-error-container: #f95630;
   --color-tertiary-fixed-dim: #e5dbd1;
   --color-secondary-dim: #00557c;
@@ -66,6 +66,7 @@
     system-ui, sans-serif;
 }
 
+/* Layout & typography */
 .glass-nav {
   background: rgba(255, 245, 238, 0.7);
   backdrop-filter: blur(24px);

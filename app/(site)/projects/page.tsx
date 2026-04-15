@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import type { CSSProperties, ReactNode } from "react";
 import Image from "next/image";
+
+import { MaterialSymbol } from "@/components/MaterialSymbol";
 
 export const metadata: Metadata = {
   title: "Projects",
@@ -9,10 +10,6 @@ export const metadata: Metadata = {
 };
 
 const cardShadow = "shadow-[0_20px_40px_rgba(55,45,36,0.06)]";
-
-const filled: CSSProperties = {
-  fontVariationSettings: "'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24",
-};
 
 const HERO_IMG =
   "https://lh3.googleusercontent.com/aida-public/AB6AXuD4Gk97MwtFxy-ZGRsGVU-C6MFPZGYy-QFB2ZulsfzUJvSTyz2U6-mcMgpx9vRdeqPqaM1XUB3_eloUIrbxyDIAw_8miiMGZrjteWqrC9lRL58-BLtIyvEh7rkvqwmNOhwfev3YWvycwglwdIrZRESL7s0nuu0cNkAOVTcL-NF3kS_6F3PZtb1Kq0lUtQr-DQ2-Vjl6p7JRDE5O1RAPS0Dl6ZoGPClg1stGqcCewBAOZoIe1Uo7qBPfvpdhNJINxUVAc3bafsq7V7Q";
@@ -38,27 +35,6 @@ const CREW = [
   { name: "Mina", src: "/MinaCrew.png", alt: "Mina" },
   { name: "Flair", src: "/FlairCrew.png", alt: "Flair" },
 ] as const;
-
-function ExternalLink({
-  href,
-  className,
-  children,
-}: {
-  href: string;
-  className?: string;
-  children: ReactNode;
-}) {
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={className}
-    >
-      {children}
-    </a>
-  );
-}
 
 export default function ProjectsPage() {
   return (
@@ -101,12 +77,11 @@ export default function ProjectsPage() {
           <div className="flex flex-col gap-10 md:flex-row">
             <div className="flex-1">
               <div className="mb-6 flex items-center gap-3">
-                <span
-                  className="material-symbols-outlined text-secondary"
-                  style={filled}
-                >
-                  playing_cards
-                </span>
+                <MaterialSymbol
+                  name="playing_cards"
+                  className="text-secondary"
+                  filled
+                />
                 <span className="font-label text-xs font-bold uppercase tracking-widest text-secondary">
                   Multiplayer Experience
                 </span>
@@ -130,18 +105,22 @@ export default function ProjectsPage() {
                 ))}
               </div>
               <div className="flex gap-4">
-                <ExternalLink
+                <a
                   href={LINKS.pokemon.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="rounded-md bg-primary px-6 py-3 text-sm font-semibold text-on-primary transition-opacity hover:opacity-90"
                 >
                   View on GitHub
-                </ExternalLink>
-                <ExternalLink
+                </a>
+                <a
                   href={LINKS.pokemon.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="rounded-md bg-secondary-container px-6 py-3 text-sm font-semibold text-on-secondary-container transition-opacity hover:opacity-90"
                 >
                   Live Demo
-                </ExternalLink>
+                </a>
               </div>
             </div>
             <div className="h-64 w-full shrink-0 overflow-hidden rounded-lg grayscale transition-all duration-700 hover:grayscale-0 md:w-64">
@@ -192,18 +171,22 @@ export default function ProjectsPage() {
             </div>
           </div>
           <div className="flex flex-col gap-2">
-            <ExternalLink
+            <a
               href={LINKS.niceGuyServices.github}
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full rounded-md bg-primary py-3 text-center text-sm font-semibold text-on-primary"
             >
               View on GitHub
-            </ExternalLink>
-            <ExternalLink
+            </a>
+            <a
               href={LINKS.niceGuyServices.live}
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full py-3 text-center text-sm font-bold text-primary underline-offset-4 hover:underline"
             >
               Live Demo
-            </ExternalLink>
+            </a>
           </div>
         </div>
 
@@ -270,9 +253,10 @@ export default function ProjectsPage() {
             ))}
           </div>
         </div>
-        <span className="material-symbols-outlined pointer-events-none absolute -bottom-8 -right-8 select-none text-[200px] text-primary/5">
-          pets
-        </span>
+        <MaterialSymbol
+          name="pets"
+          className="pointer-events-none absolute -bottom-8 -right-8 select-none text-[200px] text-primary/5"
+        />
       </section>
     </main>
   );

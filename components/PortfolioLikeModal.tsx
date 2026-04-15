@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 
+import { MaterialSymbol } from "@/components/MaterialSymbol";
+
 type Props = {
   open: boolean;
   notified: boolean;
@@ -68,15 +70,11 @@ export function PortfolioLikeModal({ open, notified, onClose }: Props) {
       >
         <div className="flex flex-col items-center space-y-6 text-center">
           <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
-            <span
-              className="material-symbols-outlined text-4xl text-primary"
-              style={{
-                fontVariationSettings:
-                  "'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24",
-              }}
-            >
-              favorite
-            </span>
+            <MaterialSymbol
+              name="favorite"
+              className="text-4xl text-primary"
+              filled
+            />
           </div>
           <div className="space-y-2">
             <h2

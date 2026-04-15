@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 
+import { MaterialSymbol } from "@/components/MaterialSymbol";
 import { PortfolioLikeModal } from "@/components/PortfolioLikeModal";
 import { PORTFOLIO_LIKES_UPDATED_EVENT } from "@/lib/portfolio-likes-events";
 
@@ -39,8 +40,9 @@ export function ContactHeartFab() {
         className="fixed bottom-8 right-8 z-40 flex h-16 w-16 cursor-pointer items-center justify-center rounded-full bg-primary text-on-primary shadow-[0_20px_40px_rgba(55,45,36,0.06)] transition-transform hover:scale-110 active:scale-95"
         aria-label="Show appreciation for this portfolio"
       >
-        <span
-          className={`material-symbols-outlined transition-colors duration-200 ${
+        <MaterialSymbol
+          name="favorite"
+          className={`transition-colors duration-200 ${
             filled ? "text-red-500" : ""
           }`}
           style={{
@@ -48,9 +50,7 @@ export function ContactHeartFab() {
               ? "'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24"
               : "'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24",
           }}
-        >
-          favorite
-        </span>
+        />
       </button>
       <PortfolioLikeModal
         open={modalOpen}

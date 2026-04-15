@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { ContactHeartFab } from "@/components/ContactHeartFab";
-import { HOME_LCP_IMAGE_SRC } from "@/lib/home-lcp";
+import { MaterialSymbol } from "@/components/MaterialSymbol";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -24,8 +24,6 @@ const PET_CHIPS = [
   { name: "Flair", src: "/FlairCrew.png" },
 ] as const;
 
-/** Replace with your resume URL (e.g. PDF or Cloudinary) and GitHub profile. */
-// const RESUME_HREF = "#";
 const GITHUB_HREF = "https://github.com/DannyNguyenCode";
 
 const SKILL_ROWS = [
@@ -43,9 +41,10 @@ export default function HomePage() {
           <div className="flex flex-col items-center gap-16 md:flex-row">
             <div className="flex-1 space-y-8">
               <div className="inline-flex items-center gap-2 rounded-full bg-surface-container px-4 py-2">
-                <span className="material-symbols-outlined text-primary">
-                  home_health
-                </span>
+                <MaterialSymbol
+                  name="home_health"
+                  className="text-primary"
+                />
                 <span className="font-label text-xs font-bold uppercase tracking-wider text-on-surface-variant">
                   Welcome to the Digital Hearth
                 </span>
@@ -62,12 +61,6 @@ export default function HomePage() {
                 <strong>Mina</strong>, and <strong>Flair</strong>.
               </p>
               <div className="flex flex-wrap gap-4 pt-2">
-                {/* <a
-                  href={RESUME_HREF}
-                  className="rounded-md bg-primary px-6 py-3 font-headline text-sm font-semibold text-on-primary transition-opacity hover:opacity-90"
-                >
-                  View Resume
-                </a> */}
                 <a
                   href={GITHUB_HREF}
                   target="_blank"
@@ -102,12 +95,13 @@ export default function HomePage() {
                 className={`relative z-10 aspect-square overflow-hidden rounded-xl ${cardShadow}`}
               >
                 <Image
-                  src={HOME_LCP_IMAGE_SRC}
+                  src="/FlairHomepageHero.png"
                   alt="Flair at the Digital Hearth — warm home workspace"
                   fill
-                  priority
+                  preload
                   fetchPriority="high"
-                  className="object-cover"
+                  loading="eager"
+                  className="h-full w-full object-cover"
                   sizes="(min-width: 1024px) 576px, (min-width: 768px) min(576px, calc(50vw - 2.5rem)), calc(100vw - 2rem)"
                 />
               </div>
@@ -149,9 +143,7 @@ export default function HomePage() {
                 className="inline-flex items-center font-bold text-primary transition-transform group-hover:translate-x-2"
               >
                 Explore Full Skillset{" "}
-                <span className="material-symbols-outlined ml-2">
-                  arrow_forward
-                </span>
+                <MaterialSymbol name="arrow_forward" className="ml-2" />
               </Link>
             </div>
 
@@ -179,7 +171,7 @@ export default function HomePage() {
                 className="mt-8 inline-flex items-center font-bold hover:underline hover:underline-offset-4"
               >
                 View Honors{" "}
-                <span className="material-symbols-outlined ml-2">school</span>
+                <MaterialSymbol name="school" className="ml-2" />
               </Link>
             </div>
 
@@ -188,9 +180,10 @@ export default function HomePage() {
               className="flex flex-col gap-8 rounded-xl bg-surface-container p-12 md:col-span-5"
             >
               <div className="flex h-20 w-20 items-center justify-center rounded-full bg-surface">
-                <span className="material-symbols-outlined text-3xl text-primary">
-                  work_history
-                </span>
+                <MaterialSymbol
+                  name="work_history"
+                  className="text-3xl text-primary"
+                />
               </div>
               <div>
                 <span className="mb-4 block font-label text-xs font-bold uppercase tracking-widest text-on-surface-variant">
@@ -232,9 +225,7 @@ export default function HomePage() {
                   className="inline-flex items-center font-bold text-primary"
                 >
                   View Case Study{" "}
-                  <span className="material-symbols-outlined ml-2">
-                    auto_awesome
-                  </span>
+                  <MaterialSymbol name="auto_awesome" className="ml-2" />
                 </Link>
               </div>
               <div className="relative h-64 flex-1 overflow-hidden rounded-lg md:h-auto md:min-h-64">

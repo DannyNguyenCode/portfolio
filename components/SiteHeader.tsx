@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
+
+import { MaterialSymbol } from "@/components/MaterialSymbol";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -78,7 +80,7 @@ export function SiteHeader() {
         </div>
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-1.5">
-            <span className="material-symbols-outlined text-primary">pets</span>
+            <MaterialSymbol name="pets" className="text-primary" />
             <span
               className="inline-flex min-w-10 justify-end font-headline text-sm font-bold tabular-nums text-primary"
               aria-live="polite"

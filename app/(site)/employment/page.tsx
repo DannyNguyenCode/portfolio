@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
+
+import { MaterialSymbol } from "@/components/MaterialSymbol";
 
 export const metadata: Metadata = {
   title: "The Professional Journey",
@@ -12,18 +13,6 @@ const EMPLOYMENT_HERO = "/MinaEmploymentHero.png";
 const SUPPORT_CARD_BG = "/MinaEmploymentSupport.png";
 
 const cardShadow = "shadow-[0_20px_40px_rgba(55,45,36,0.06)]";
-
-function Icon({
-  name,
-  className = "",
-}: {
-  name: string;
-  className?: string;
-}) {
-  return (
-    <span className={`material-symbols-outlined ${className}`}>{name}</span>
-  );
-}
 
 export default function EmploymentPage() {
   return (
@@ -82,7 +71,7 @@ export default function EmploymentPage() {
                   </p>
                 </div>
                 <div className="flex items-center gap-2 rounded-full bg-surface-container-high px-4 py-2">
-                  <Icon name="terminal" className="text-sm! text-primary" />
+                  <MaterialSymbol name="terminal" className="text-sm! text-primary" />
                   <span className="font-label text-sm font-semibold text-on-surface-variant">
                     Current Focus
                   </span>
@@ -97,7 +86,7 @@ export default function EmploymentPage() {
               <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                 <div className="rounded-lg border border-outline-variant/10 bg-background p-4">
                   <h4 className="mb-2 flex items-center gap-2 font-bold text-primary">
-                    <Icon name="architecture" />
+                    <MaterialSymbol name="architecture" />
                     Digital Architect
                   </h4>
                   <p className="text-sm leading-snug text-on-surface-variant">
@@ -107,7 +96,7 @@ export default function EmploymentPage() {
                 </div>
                 <div className="rounded-lg border border-outline-variant/10 bg-background p-4">
                   <h4 className="mb-2 flex items-center gap-2 font-bold text-primary">
-                    <Icon name="family_history" />
+                    <MaterialSymbol name="family_history" />
                     Family Support
                   </h4>
                   <p className="text-sm leading-snug text-on-surface-variant">
@@ -138,7 +127,7 @@ export default function EmploymentPage() {
                   </p>
                 </div>
                 <div className="flex items-center gap-2 rounded-full bg-surface-container px-4 py-2">
-                  <Icon name="history_edu" className="text-sm! text-primary" />
+                  <MaterialSymbol name="history_edu" className="text-sm! text-primary" />
                   <span className="font-label text-sm font-semibold text-on-surface-variant">
                     Dual Path (Current)
                   </span>
@@ -155,7 +144,7 @@ export default function EmploymentPage() {
               <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                 <div className="rounded-lg border border-outline-variant/10 bg-background p-4">
                   <h4 className="mb-2 flex items-center gap-2 font-bold text-primary">
-                    <Icon name="volunteer_activism" />
+                    <MaterialSymbol name="volunteer_activism" />
                     Empathy First
                   </h4>
                   <p className="text-sm leading-snug text-on-surface-variant">
@@ -165,7 +154,7 @@ export default function EmploymentPage() {
                 </div>
                 <div className="rounded-lg border border-outline-variant/10 bg-background p-4">
                   <h4 className="mb-2 flex items-center gap-2 font-bold text-primary">
-                    <Icon name="psychology" />
+                    <MaterialSymbol name="psychology" />
                     Complex Resolution
                   </h4>
                   <p className="text-sm leading-snug text-on-surface-variant">
@@ -193,7 +182,7 @@ export default function EmploymentPage() {
                   </p>
                 </div>
                 <div className="flex items-center gap-2 rounded-full bg-surface-container-high px-4 py-2">
-                  <Icon name="pets" className="text-sm! text-primary" />
+                  <MaterialSymbol name="pets" className="text-sm! text-primary" />
                   <span className="font-label text-sm font-semibold text-on-surface-variant">
                     Supported by Flair
                   </span>
@@ -206,7 +195,7 @@ export default function EmploymentPage() {
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
-                  <Icon name="payments" className="text-primary" />
+                  <MaterialSymbol name="payments" className="text-primary" />
                   <div>
                     <h5 className="font-bold text-on-surface">
                       Seamless Transactions
@@ -218,7 +207,7 @@ export default function EmploymentPage() {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <Icon name="dynamic_feed" className="text-primary" />
+                  <MaterialSymbol name="dynamic_feed" className="text-primary" />
                   <div>
                     <h5 className="font-bold text-on-surface">
                       Real-Time Logistics
@@ -266,7 +255,7 @@ export default function EmploymentPage() {
                   ] as const
                 ).map(([icon, label]) => (
                   <li key={label} className="flex items-center gap-2">
-                    <Icon name={icon} className="text-xs! text-primary" />
+                    <MaterialSymbol name={icon} className="text-xs! text-primary" />
                     {label}
                   </li>
                 ))}
@@ -290,7 +279,7 @@ export default function EmploymentPage() {
                   </p>
                 </div>
                 <div className="flex items-center gap-2 rounded-full bg-surface-container-high px-4 py-2">
-                  <Icon name="pets" className="text-sm! text-primary" />
+                  <MaterialSymbol name="pets" className="text-sm! text-primary" />
                   <span className="font-label text-sm font-semibold text-on-surface-variant">
                     Supported by Mina
                   </span>
@@ -366,14 +355,14 @@ export default function EmploymentPage() {
                 <p className="mb-4 text-sm font-medium text-on-surface-variant">
                   Looking for a developer who speaks &apos;Human&apos;?
                 </p>
-                <Link
+                <a
                   href="https://niceguyservices.vercel.app/contact"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full rounded-lg bg-primary py-3 text-center font-headline font-bold text-on-primary transition-colors hover:bg-primary-dim"
                 >
                   Let&apos;s Talk Shop
-                </Link>
+                </a>
               </div>
             </div>
 
@@ -390,7 +379,7 @@ export default function EmploymentPage() {
               </div>
               <div className="relative z-10">
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary-container">
-                  <Icon
+                  <MaterialSymbol
                     name="favorite"
                     className="text-on-primary-container text-xl!"
                   />

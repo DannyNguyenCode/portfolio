@@ -2,18 +2,6 @@ import { NextResponse } from "next/server";
 
 import { incrementPortfolioLikesCount } from "@/lib/portfolio-likes";
 
-/**
- * POST — increments the public like counter; optional Resend email ping.
- * Counter persistence:
- *   - Production: set UPSTASH_REDIS_REST_URL + UPSTASH_REDIS_REST_TOKEN (Upstash Redis REST)
- *   - Local dev: data/portfolio-hearts.json (writable)
- *   - Fallback display seed: NEXT_PUBLIC_PORTFOLIO_HEARTS
- *
- * Email (.env.local):
- *   RESEND_API_KEY=re_...
- *   PORTFOLIO_LIKE_NOTIFY_EMAIL=you@example.com
- *   RESEND_FROM_EMAIL=Portfolio <onboarding@resend.dev>
- */
 export async function POST() {
   const count = await incrementPortfolioLikesCount();
 

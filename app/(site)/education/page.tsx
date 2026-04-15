@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import type { CSSProperties } from "react";
 import Image from "next/image";
+
+import { MaterialSymbol } from "@/components/MaterialSymbol";
 
 export const metadata: Metadata = {
   title: "Academic Foundation",
@@ -10,29 +11,6 @@ export const metadata: Metadata = {
 
 const HERO_IMG =
   "https://lh3.googleusercontent.com/aida-public/AB6AXuDRRkDf9LpLXAjFIDCJqJBcOdSSueCoYmddVWvJHCn1bDohAAWQ44-nLLfu6I8FhXj3gSyy2Fj9IsEWcVj3gQVhKjOXYOjJ8vUdJP-fpwk7IltPrBSikBDf-Y-w2v82befLBWMZa9Pi4LAYQJcMTM1-6WwYvoHjfnIRAQcXxz88wWp4zD1kTV5xkUfAOrOC3lhJhgsB_NXpNPWevcQNgeifVuu16v9WZk5XLlTxJWxHNLymAnvNAkds1qcXUllp9OWsKr1rS16tRrU";
-
-const filledIcon = {
-  fontVariationSettings: "'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24",
-} as const;
-
-function Icon({
-  name,
-  className = "",
-  filled,
-  style,
-}: {
-  name: string;
-  className?: string;
-  filled?: boolean;
-  style?: CSSProperties;
-}) {
-  return (
-    <span
-      className={`material-symbols-outlined ${className}`}
-      style={filled ? { ...filledIcon, ...style } : style}
-    />
-  );
-}
 
 const PET_CHIPS = [
   {
@@ -88,7 +66,7 @@ export default function EducationPage() {
           </div>
           <div className="absolute -bottom-14 -left-18 z-10 max-w-[200px] rounded-lg border border-outline-variant/15 bg-surface-container-lowest p-6 shadow-xl">
             <div className="mb-2 flex items-center gap-2">
-              <Icon name="stars" className="text-secondary" filled />
+              <MaterialSymbol name="stars" className="text-secondary" filled />
               <span className="font-bold text-on-surface">Honours</span>
             </div>
             <p className="text-xs text-on-surface-variant">
@@ -112,19 +90,19 @@ export default function EducationPage() {
               </h3>
               <div className="mt-6 flex flex-wrap gap-4">
                 <div className="flex items-center gap-2 rounded-full bg-surface-container px-4 py-2">
-                  <Icon name="school" className="text-primary" />
+                  <MaterialSymbol name="school" className="text-primary" />
                   <span className="font-medium text-on-surface-variant">
                     2-Year Diploma
                   </span>
                 </div>
                 <div className="flex items-center gap-2 rounded-full bg-surface-container px-4 py-2">
-                  <Icon name="military_tech" className="text-primary" />
+                  <MaterialSymbol name="military_tech" className="text-primary" />
                   <span className="font-medium text-on-surface-variant">
                     3.8 GPA
                   </span>
                 </div>
                 <div className="flex items-center gap-2 rounded-full bg-primary-container px-4 py-2 text-on-primary-container">
-                  <Icon name="workspace_premium" filled />
+                  <MaterialSymbol name="workspace_premium" filled />
                   <span className="font-bold">High Honours</span>
                 </div>
               </div>
@@ -146,7 +124,7 @@ export default function EducationPage() {
         <div className="rounded-xl bg-surface-container-low p-10 transition-colors duration-300 hover:bg-surface-bright md:col-span-7">
           <div className="mb-8 flex items-center gap-4">
             <div className="flex h-12 w-12 items-center justify-center rounded-full bg-secondary/10 text-secondary">
-              <Icon name="language" />
+              <MaterialSymbol name="language" />
             </div>
             <h3 className="font-headline text-2xl font-bold text-on-surface">
               Web Development
@@ -176,7 +154,7 @@ export default function EducationPage() {
                 key={row.title}
                 className="flex items-start gap-4 rounded-lg bg-surface-container-lowest/50 p-4"
               >
-                <Icon
+                <MaterialSymbol
                   name={row.icon}
                   className="mt-1 text-secondary-dim"
                 />
@@ -194,7 +172,7 @@ export default function EducationPage() {
           <div>
             <div className="mb-8 flex items-center gap-4">
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
-                <Icon name="account_tree" />
+                <MaterialSymbol name="account_tree" />
               </div>
               <h3 className="font-headline text-2xl font-bold text-on-surface">
                 Project Management
@@ -217,7 +195,7 @@ export default function EducationPage() {
             </ul>
           </div>
           <div className="mt-12 flex items-center gap-4 rounded-lg bg-surface-container-highest p-4">
-            <Icon name="pets" className="text-primary" filled />
+            <MaterialSymbol name="pets" className="text-primary" filled />
             <span className="text-sm font-medium italic text-on-tertiary-fixed-variant">
               Supported by Flair&apos;s focused energy.
             </span>
@@ -228,7 +206,7 @@ export default function EducationPage() {
         <div className="rounded-xl bg-surface-container p-10 md:col-span-5">
           <div className="mb-8 flex items-center gap-4">
             <div className="flex h-12 w-12 items-center justify-center rounded-full bg-tertiary/10 text-tertiary">
-              <Icon name="database" />
+              <MaterialSymbol name="database" />
             </div>
             <h3 className="font-headline text-2xl font-bold text-on-surface">
               Database Systems
@@ -266,7 +244,7 @@ export default function EducationPage() {
         <div className="relative overflow-hidden rounded-xl bg-surface-container-high p-10 md:col-span-7">
           <div className="mb-8 flex items-center gap-4">
             <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
-              <Icon name="data_object" />
+              <MaterialSymbol name="data_object" />
             </div>
             <h3 className="font-headline text-2xl font-bold text-on-surface">
               Object Oriented Programming
@@ -294,7 +272,7 @@ export default function EducationPage() {
             <div className="rounded-xl border border-white/20 bg-surface-container-lowest/40 p-6 backdrop-blur-md">
               <div className="mb-4 flex items-center justify-between">
                 <h4 className="font-bold text-on-surface">Capstone Project</h4>
-                <Icon name="verified" className="text-secondary" />
+                <MaterialSymbol name="verified" className="text-secondary" />
               </div>
               <p className="mb-4 text-sm text-on-surface-variant">
                 Open Source Development Project: Building and scaling an
@@ -306,9 +284,7 @@ export default function EducationPage() {
             </div>
           </div>
           <div className="pointer-events-none absolute bottom-0 right-0 opacity-10">
-            <span className="material-symbols-outlined text-[12rem]">
-              terminal
-            </span>
+            <MaterialSymbol name="terminal" className="text-[12rem]" />
           </div>
         </div>
       </section>

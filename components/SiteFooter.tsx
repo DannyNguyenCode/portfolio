@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export function SiteFooter() {
   return (
     <footer className="mt-20 w-full bg-surface-container px-8 py-12">
@@ -14,22 +12,22 @@ export function SiteFooter() {
           </p>
         </div>
         <div className="flex flex-wrap justify-center gap-8 font-body text-xs uppercase tracking-wider">
-          <Link
+          <a
             href="https://www.linkedin.com/in/gia-bao-danny-nguyen/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-on-surface underline-offset-4 transition-colors hover:text-primary hover:underline"
           >
             LinkedIn
-          </Link>
-          <Link
+          </a>
+          <a
             href="https://github.com/DannyNguyenCode"
             target="_blank"
             rel="noopener noreferrer"
             className="text-on-surface underline-offset-4 transition-colors hover:text-primary hover:underline"
           >
             GitHub
-          </Link>
+          </a>
         </div>
       </div>
     </footer>
