@@ -13,6 +13,7 @@ const FOOTER_NAV = [
   { href: "/employment", label: "Professional Journey" },
   { href: "/projects", label: "Technical Creations" },
   { href: "/education", label: "Academic Foundation" },
+  { href: "/contact", label: "Connect" },
 ] as const;
 
 export function SiteFooter() {
@@ -94,14 +95,32 @@ export function SiteFooter() {
           </div>
         </div>
       </div>
-      <div className="mx-auto mt-16 flex max-w-7xl flex-col items-center justify-between gap-4 border-t border-primary/10 pt-8 text-xs text-stone-500 md:flex-row">
-        <div>
+      <div className="mx-auto mt-16 flex max-w-7xl flex-col items-start justify-between gap-6 border-t border-primary/10 pt-8 text-xs text-stone-500 md:flex-row md:items-center">
+        <div className="text-left">
           © {new Date().getFullYear()} The Digital Hearth. Inspired by Nala,
           Mina, and Flair.
         </div>
-        <div className="flex gap-6">
-          <span>Built with Next.js &amp; Tailwind</span>
-          <span>Vercel Certified</span>
+        <div className="flex w-fit flex-col items-start gap-2">
+          <span className="font-label text-[10px] font-bold uppercase tracking-widest text-stone-400">
+            Powered by
+          </span>
+          <a
+            href="https://niceguyservices.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-lg px-2 py-1 text-stone-600 transition-colors hover:bg-surface-bright hover:text-primary"
+          >
+            <Image
+              src="/blue_logo_test.png"
+              alt=""
+              width={120}
+              height={40}
+              className="h-8 w-auto max-w-28 object-contain object-left"
+            />
+            <span className="font-headline text-sm font-semibold tracking-tight">
+              NiceGuyServices
+            </span>
+          </a>
         </div>
       </div>
     </footer>

@@ -29,11 +29,11 @@ const CREW = [
   },
   {
     name: "Flair",
-    role: "Junior Debugger",
+    role: "Senior Research Assistant",
     blurb:
       "The youngest cat. Keeps the cursor chasing game strong during late-night refactors.",
     src: "/FlairCrew.png",
-    alt: "Flair, junior debugger",
+    alt: "Flair, Senior Research Assistant",
   },
 ] as const;
 

@@ -12,6 +12,7 @@ const nav = [
   { href: "/employment", label: "Professional Journey" },
   { href: "/projects", label: "Technical Creations" },
   { href: "/education", label: "Academic Foundation" },
+  { href: "/contact", label: "Connect" },
 ] as const;
 
 function linkActive(pathname: string, href: string) {

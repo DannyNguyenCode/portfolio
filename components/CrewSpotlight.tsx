@@ -125,15 +125,13 @@ export const minaHabitatSpotlightPreset: Omit<CrewSpotlightProps, "className"> =
   imageAlt: "Mina in a warm, cozy setting beside the workspace",
   title: (
     <>
-      Mina&apos;s Smart Play{" "}
-      <span className="text-primary italic">Habitat</span>
+      Mina's{" "}
+      Smart Play<span className="text-primary italic">Habitat</span>
     </>
   ),
   description: (
     <>
-      Watching Mina move—quick, reactive, and precise—inspired the way this
-      portfolio feels. Built with React, Next.js, and Tailwind, it prioritizes
-      low-latency interactions and smooth, intuitive UI transitions.
+      As Happiness Director, Mina enforces a strict hourly<span className="font-bold text-primary-dim italic"> refresh protocol</span>. Her non-negotiable requirements for fresh air, optimal Vitamin D intake, and treat-based incentives ensure peak cognitive performance and sustained code quality throughout the day.
     </>
   ),
   features: [
@@ -169,9 +167,9 @@ export const nalaSpotlightPreset: Omit<CrewSpotlightProps, "className"> = {
     <>
       As our Senior QA Lead, Nala enforces a rigorous &ldquo;warm-start&rdquo;
       protocol. Her non-negotiable requirement for{" "}
-      <strong className="font-semibold text-on-surface">
+      <span className="font-bold text-primary-dim italic">
         keyboard pre-warming
-      </strong>{" "}
+      </span>{" "}
       ensures that every keypress is softened by thermal excellence before the
       first line of code is even written. This artisanal approach to environment
       prep drastically reduces syntax errors caused by cold fingers.
@@ -201,11 +199,11 @@ export const nalaSpotlightPreset: Omit<CrewSpotlightProps, "className"> = {
 
 export const flairSpotlightPreset: Omit<CrewSpotlightProps, "className"> = {
   imageSrc: "/FlairCrew.png",
-  imageAlt: "Flair, junior debugger — crew spotlight portrait",
-  title: "Senior Research Assistant",
+  imageAlt: "Flair, Senior Research Assistant — crew spotlight portrait",
+  title: <>Flair's Energetic<br /><span className='text-primary italic'> Research Hub</span></>,
   description: (
     <>
-      The youngest member of the Digital Hearth, Flair provides the essential{" "}
+      As our Senior Research Assistant and the youngest member of the Digital Hearth, Flair provides the essential{" "}
       <span className="font-bold text-primary-dim italic">
         late-night debugging energy
       </span>{" "}

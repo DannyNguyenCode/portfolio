@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | The Digital Hearth",
   },
   description:
-    "Portfolio — home, skills, employment, education, and projects.",
+    "Portfolio — home, skills, employment, education, projects, and contact.",
 };
 
 export default function RootLayout({
