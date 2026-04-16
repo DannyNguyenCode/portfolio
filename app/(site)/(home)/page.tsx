@@ -50,9 +50,9 @@ const SKILL_ROWS = [
 export default function HomePage() {
   return (
     <>
-      <main className="pt-12 md:pt-16">
+      <main className="pt-12 md:pt-28 lg:pt-32">
         {/* Hero */}
-        <section className="mx-auto max-w-7xl px-8 py-20 md:py-30">
+        <section className="mx-auto max-w-7xl px-8 pb-20 md:pb-30">
           <div className="flex flex-col items-center gap-16 md:flex-row">
             <div className="flex-1 space-y-8">
               <div className="inline-flex items-center gap-2 rounded-full bg-surface-container px-4 py-2">

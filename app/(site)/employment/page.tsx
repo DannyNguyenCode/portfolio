@@ -15,6 +15,10 @@ export default function EmploymentPage() {
   return (
     <main className="mx-auto max-w-7xl px-4 pb-20 pt-24 sm:px-6 md:px-8 md:pt-28 lg:pt-32">
       <header className="mb-16 text-center md:mb-20 md:text-left">
+        <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-surface-container-high px-4 py-2 font-label text-xs font-bold uppercase tracking-widest text-on-surface-variant">
+          <MaterialSymbol name="work" className="text-base text-primary" filled />
+          Experience
+        </div>
         <h1 className="mb-6 font-headline text-4xl font-extrabold leading-none tracking-tight text-on-surface sm:text-5xl md:text-6xl lg:text-7xl">
           The <span className="text-primary">Professional <br /> Journey </span>
         </h1>

@@ -36,9 +36,10 @@ export default function ProjectsPage() {
       {/* Hero */}
       <header className="mb-16 md:mb-24">
         <div className="max-w-2xl">
-          <span className="mb-6 inline-block rounded-full bg-secondary-container px-4 py-1 font-label text-xs font-bold tracking-widest text-on-secondary-container uppercase">
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-surface-container-high px-4 py-2 font-label text-xs font-bold uppercase tracking-widest text-on-surface-variant">
+            <MaterialSymbol name="deployed_code" className="text-base text-primary" filled />
             Portfolio
-          </span>
+          </div>
           <h1 className="mb-8 font-headline text-5xl leading-none font-extrabold tracking-tighter text-on-surface md:text-7xl">
             Technical <br />
             <span className="text-primary">Creations</span>

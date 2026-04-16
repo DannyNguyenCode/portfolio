@@ -39,9 +39,13 @@ const CREW = [
 
 export default function SkillsPage() {
   return (
-    <main className="mx-auto max-w-7xl px-4 pb-16 pt-20 sm:px-6 sm:pb-20 sm:pt-24 md:px-8 md:pb-24 md:pt-24 lg:pt-28">
+    <main className="mx-auto max-w-7xl px-4 pb-16 pt-20 sm:px-6 sm:pb-20 sm:pt-24 md:px-8 md:pb-24 md:pt-28 lg:pt-32">
       <header className="mb-12 flex flex-col items-stretch gap-8 sm:mb-16 md:mb-20 lg:flex-row lg:items-center lg:justify-between lg:gap-10 xl:gap-12">
         <div className="min-w-0 flex-1 text-center lg:text-left">
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-surface-container-high px-4 py-2 font-label text-xs font-bold uppercase tracking-widest text-on-surface-variant">
+            <MaterialSymbol name="construction" className="text-base text-primary" filled />
+            Skills
+          </div>
           <h1 className="mb-4 font-headline text-4xl font-extrabold leading-[1.08] tracking-tighter text-on-surface sm:mb-5 sm:text-5xl md:mb-6 md:text-6xl lg:text-7xl">
             The <br />
             <span className="text-primary">Craftmanship</span>

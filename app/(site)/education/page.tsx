@@ -18,21 +18,14 @@ export default function EducationPage() {
     <main className="mx-auto max-w-7xl px-6 pb-20 pt-24 selection:bg-primary-container selection:text-on-primary-container md:px-8 md:pt-28 lg:pt-32">
       {/* Hero */}
       <section className="mb-24">
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
+        <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12">
           <div className="lg:col-span-7">
-            <div className="mb-6 flex flex-wrap items-center gap-3">
-              <div className="rounded-full bg-surface-container-high px-4 py-1.5 font-label text-xs font-bold uppercase tracking-widest text-on-surface-variant">
-                Academic Excellence
-              </div>
-              <div className="flex items-center gap-2 rounded-full bg-secondary-container px-3 py-1 font-label text-xs font-bold text-on-secondary-container">
-                <MaterialSymbol
-                  name="pets"
-                  className="text-base"
-                  filled
-                />
-                Inspired by Nala
-              </div>
+
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-surface-container-high px-4 py-2 font-label text-xs font-bold uppercase tracking-widest text-on-surface-variant">
+              <MaterialSymbol name="school" className="text-base text-primary" filled />
+              Academic Excellence
             </div>
+
             <h1 className="mb-8 font-headline text-5xl font-extrabold leading-[1.1] tracking-tighter text-on-surface md:text-7xl">
               The <span className="text-primary">Academic <br /> Foundation</span>
 
@@ -68,7 +61,7 @@ export default function EducationPage() {
                 src={HERO_IMG}
                 alt="Modern university campus architecture with sunlight streaming through large glass windows onto a clean minimalist atrium with students"
                 width={800}
-                height={1000}
+                height={800}
                 className="h-full w-full object-cover"
                 priority={true}
                 sizes="(min-width: 1024px) 40vw, 100vw"
