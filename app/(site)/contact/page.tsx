@@ -142,15 +142,6 @@ export default function ContactPage() {
               </a>
             </div>
           </div>
-
-          <div className="border-t border-outline-variant/20 pt-8 opacity-80">
-            <div className="flex items-center gap-2">
-              <MaterialSymbol name="location_on" className="text-primary" />
-              <span className="font-medium text-on-surface-variant">
-                Based in a cozy corner of the Pacific Northwest
-              </span>
-            </div>
-          </div>
         </aside>
       </div>
     </main>
