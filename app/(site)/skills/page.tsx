@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 
+import { CrewSpotlight, nalaSpotlightPreset } from "@/components/CrewSpotlight";
 import { MaterialSymbol } from "@/components/MaterialSymbol";
 
 export const metadata: Metadata = {
-  title: "Skills",
+  title: "The Craftmanship",
   description:
     "Core stack, backend ecosystem, and the support crew behind The Digital Hearth.",
 };
@@ -38,34 +39,34 @@ const CREW = [
 
 export default function SkillsPage() {
   return (
-    <main className="mx-auto max-w-7xl px-8 pb-24 pt-12">
-      <header className="mb-20 flex flex-col items-end gap-12 md:flex-row">
-        <div className="flex-1">
-          <h1 className="mb-6 text-6xl font-extrabold leading-none tracking-tighter text-on-surface md:text-7xl">
-            Skills &amp; <br />
-            <span className="text-primary">Foundations.</span>
+    <main className="mx-auto max-w-7xl px-4 pb-16 pt-20 sm:px-6 sm:pb-20 sm:pt-24 md:px-8 md:pb-24 md:pt-24 lg:pt-28">
+      <header className="mb-12 flex flex-col items-stretch gap-8 sm:mb-16 md:mb-20 lg:flex-row lg:items-center lg:justify-between lg:gap-10 xl:gap-12">
+        <div className="min-w-0 flex-1 text-center lg:text-left">
+          <h1 className="mb-4 font-headline text-4xl font-extrabold leading-[1.08] tracking-tighter text-on-surface sm:mb-5 sm:text-5xl md:mb-6 md:text-6xl lg:text-7xl">
+            The <br />
+            <span className="text-primary">Craftmanship</span>
           </h1>
-          <p className="max-w-2xl text-xl leading-relaxed text-on-surface-variant">
+          <p className="mx-auto max-w-2xl text-base leading-relaxed text-on-surface-variant sm:text-lg md:text-xl lg:mx-0">
             Every line of code is written from the warmth of a shared workspace.
             My technical journey is fueled by continuous learning and the quiet,
             unwavering companionship of my family.
           </p>
         </div>
-        <div className="relative hidden aspect-square w-1/3 rotate-3 overflow-hidden rounded-xl bg-surface-container transition-transform duration-500 hover:rotate-0 lg:block">
+        <div className="relative mx-auto aspect-square w-full max-w-[min(100%,280px)] shrink-0 overflow-hidden rounded-xl bg-surface-container rotate-2 transition-transform duration-500 hover:rotate-0 sm:max-w-xs md:max-w-sm lg:mx-0 lg:w-[min(100%,22rem)] lg:max-w-none xl:w-80">
           <Image
             src="/HeroFlair.png"
             alt="Flair, junior debugger, in a cozy home setting"
             fill
             className="object-cover"
             priority={true}
-            sizes="(min-width: 1024px) 33vw, 0px"
+            sizes="(max-width: 1023px) min(320px, 100vw), 320px"
           />
         </div>
       </header>
 
-      <div className="flex flex-col gap-16 lg:flex-row">
+      <div className="flex flex-col gap-12 sm:gap-14 lg:flex-row lg:gap-16">
         <section className="flex-2">
-          <h2 className="mb-10 flex items-center gap-3 text-3xl font-bold">
+          <h2 className="mb-8 flex flex-wrap items-center gap-2 text-2xl font-bold sm:mb-10 sm:gap-3 sm:text-3xl">
             <MaterialSymbol name="terminal" className="text-secondary" />
             Core Stack
           </h2>
@@ -209,7 +210,7 @@ export default function SkillsPage() {
         </section>
 
         <aside className="flex-1 lg:max-w-sm">
-          <div className="sticky top-32 space-y-8">
+          <div className="lg:sticky lg:top-28">
             <div className="rounded-xl border-l-4 border-primary bg-surface-container p-8">
               <h2 className="mb-6 flex items-center gap-2 font-headline text-2xl font-bold">
                 <MaterialSymbol name="favorite" />
@@ -256,6 +257,8 @@ export default function SkillsPage() {
           </div>
         </aside>
       </div>
+
+      <CrewSpotlight {...nalaSpotlightPreset} className="mt-16 w-full sm:mt-20" />
     </main>
   );
 }

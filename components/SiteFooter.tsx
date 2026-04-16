@@ -1,33 +1,107 @@
+import Image from "next/image";
+import Link from "next/link";
+
+const CREW = [
+  { name: "Mina", src: "/MinaCrew.png", alt: "Mina" },
+  { name: "Nala", src: "/NalaCrew.png", alt: "Nala" },
+  { name: "Flair", src: "/FlairCrew.png", alt: "Flair" },
+] as const;
+
+const FOOTER_NAV = [
+  { href: "/", label: "The Hearth" },
+  { href: "/skills", label: "The Craftmanship" },
+  { href: "/employment", label: "Professional Journey" },
+  { href: "/projects", label: "Technical Creations" },
+  { href: "/education", label: "Academic Foundation" },
+] as const;
+
 export function SiteFooter() {
   return (
-    <footer className="mt-20 w-full bg-surface-container px-8 py-12">
-      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 md:flex-row">
-        <div className="flex flex-col items-center gap-2 md:items-start">
-          <span className="font-headline text-lg font-semibold text-primary">
+    <footer className="mt-20 w-full rounded-t-xl bg-surface-container px-8 py-16 md:px-12">
+      <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-12 md:flex-row">
+        <div className="max-w-sm">
+          <div className="mb-6 font-headline text-2xl font-bold tracking-tighter text-primary">
             The Digital Hearth
-          </span>
-          <p className="font-body text-xs uppercase tracking-wider text-on-surface">
-            © {new Date().getFullYear()} The Digital Hearth. Built with warmth
-            and care.
+          </div>
+          <p className="mb-8 text-sm leading-relaxed text-stone-600">
+            Designing interfaces that feel like home. Built with love for clean
+            code and soft lighting.
           </p>
+          <div className="flex flex-wrap items-center gap-4">
+            {CREW.map((pet) => (
+              <div key={pet.name} className="group/crew relative">
+                <div className="h-12 w-12 overflow-hidden rounded-full border-2 border-primary-container transition-transform duration-300 group-hover/crew:scale-110">
+                  <Image
+                    src={pet.src}
+                    alt={pet.alt}
+                    width={48}
+                    height={48}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                <span className="pointer-events-none absolute -top-10 left-1/2 -translate-x-1/2 rounded bg-on-surface px-2 py-1 text-[10px] text-surface opacity-0 transition-opacity group-hover/crew:opacity-100">
+                  {pet.name}
+                </span>
+              </div>
+            ))}
+            <span className="ml-2 text-xs font-medium text-stone-500">
+              The Support Crew
+            </span>
+          </div>
         </div>
-        <div className="flex flex-wrap justify-center gap-8 font-body text-xs uppercase tracking-wider">
-          <a
-            href="https://www.linkedin.com/in/gia-bao-danny-nguyen/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-on-surface underline-offset-4 transition-colors hover:text-primary hover:underline"
-          >
-            LinkedIn
-          </a>
-          <a
-            href="https://github.com/DannyNguyenCode"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-on-surface underline-offset-4 transition-colors hover:text-primary hover:underline"
-          >
-            GitHub
-          </a>
+        <div className="grid grid-cols-2 gap-12 md:gap-24">
+          <div>
+            <h3 className="mb-6 font-headline font-bold text-primary">
+              Navigation
+            </h3>
+            <ul className="space-y-4 text-sm text-stone-600">
+              {FOOTER_NAV.map(({ href, label }) => (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    className="underline-offset-4 decoration-amber-500/30 hover:underline"
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3 className="mb-6 font-headline font-bold text-primary">Social</h3>
+            <ul className="space-y-4 text-sm text-stone-600">
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/gia-bao-danny-nguyen/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline-offset-4 decoration-amber-500/30 hover:underline"
+                >
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/DannyNguyenCode"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline-offset-4 decoration-amber-500/30 hover:underline"
+                >
+                  GitHub
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div className="mx-auto mt-16 flex max-w-7xl flex-col items-center justify-between gap-4 border-t border-primary/10 pt-8 text-xs text-stone-500 md:flex-row">
+        <div>
+          © {new Date().getFullYear()} The Digital Hearth. Inspired by Nala,
+          Mina, and Flair.
+        </div>
+        <div className="flex gap-6">
+          <span>Built with Next.js &amp; Tailwind</span>
+          <span>Vercel Certified</span>
         </div>
       </div>
     </footer>

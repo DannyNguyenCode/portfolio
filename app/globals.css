@@ -1,7 +1,6 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* Theme tokens */
   --color-error-container: #f95630;
   --color-tertiary-fixed-dim: #e5dbd1;
   --color-secondary-dim: #00557c;
@@ -72,7 +71,14 @@
   backdrop-filter: blur(24px);
 }
 
+.asymmetric-image-mask {
+  border-radius: 3rem 1rem 8rem 2rem;
+}
+
 .material-symbols-outlined {
+  font-family: "Material Symbols Outlined", sans-serif;
+  font-style: normal;
+  font-weight: normal;
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
   font-size: 1.5rem;
   line-height: 1;
@@ -86,6 +92,22 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: var(--font-headline);
 }
+
+@keyframes bounce-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 4s ease-in-out infinite;
+}
+

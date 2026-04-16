@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
-import { ContactHeartFab } from "@/components/ContactHeartFab";
 import { MaterialSymbol } from "@/components/MaterialSymbol";
 
 export const metadata: Metadata = {
@@ -13,9 +12,25 @@ export const metadata: Metadata = {
 
 const cardShadow = "shadow-[0_20px_40px_rgba(55,45,36,0.06)]";
 
-const INSPIRED_IMGS = [
-  "/HomepageNalainspiration.png",
-  "/HomepageMinainspiration.png",
+const INSPIRED_GALLERY = [
+  {
+    src: "/HomepageNalainspiration.png",
+    alt: "Yellow Labrador in tall grass at golden hour",
+    className:
+      "relative mt-8 aspect-[4/5] min-h-[220px] w-full overflow-hidden rounded-xl sm:mt-12 sm:min-h-[240px] md:mt-12 md:aspect-auto md:h-64 md:min-h-0",
+  },
+  {
+    src: "/HomepageMinainspiration.png",
+    alt: "Silver tabby kitten sleeping curled in a chunky knit blanket",
+    className:
+      "relative aspect-[4/5] min-h-[220px] w-full overflow-hidden rounded-xl sm:min-h-[240px] md:aspect-auto md:h-64 md:min-h-0",
+  },
+  {
+    src: "/FlairEmployment.png",
+    alt: "Flair at the hearth—playful energy beside the work setup",
+    className:
+      "relative col-span-2 aspect-[16/9] min-h-[200px] w-full overflow-hidden rounded-xl sm:min-h-[220px] md:col-span-1 md:mt-12 md:aspect-auto md:h-64 md:min-h-0",
+  },
 ] as const;
 
 const PET_CHIPS = [
@@ -70,29 +85,31 @@ export default function HomePage() {
                   GitHub
                 </a>
               </div>
-              <div className="flex flex-wrap gap-4 pt-4">
+              <div className="flex flex-wrap gap-4 pt-4 md:gap-5">
                 {PET_CHIPS.map((pet) => (
                   <div
                     key={pet.name}
-                    className="flex items-center gap-2 rounded-full bg-surface-container px-3 py-1.5"
+                    className="flex items-center gap-2 rounded-full bg-surface-container px-3 py-1.5 md:gap-3 md:px-5 md:py-2.5 lg:px-6 lg:py-3"
                   >
-                    <div className="relative h-6 w-6 overflow-hidden rounded-full bg-surface-container-high">
+                    <div className="relative h-6 w-6 overflow-hidden rounded-full bg-surface-container-high md:h-10 md:w-10 lg:h-12 lg:w-12">
                       <Image
                         src={pet.src}
                         alt={pet.name}
                         fill
                         className="object-cover"
-                        sizes="24px"
+                        sizes="(min-width: 1024px) 48px, (min-width: 768px) 40px, 24px"
                       />
                     </div>
-                    <span className="text-xs font-semibold">{pet.name}</span>
+                    <span className="text-xs font-semibold md:text-sm lg:text-base">
+                      {pet.name}
+                    </span>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="relative flex-1">
+            <div className="relative w-full min-w-0 flex-1 shrink-0 md:min-h-0">
               <div
-                className={`relative z-10 aspect-square overflow-hidden rounded-xl ${cardShadow}`}
+                className={`relative z-10 mx-auto aspect-square w-full max-w-[min(100%,28rem)] overflow-hidden rounded-xl md:mx-0 md:max-w-none ${cardShadow}`}
               >
                 <Image
                   src="/FlairHomepageHero.png"
@@ -101,11 +118,11 @@ export default function HomePage() {
                   preload
                   fetchPriority="high"
                   loading="eager"
-                  className="h-full w-full object-cover"
+                  className="object-cover"
                   sizes="(min-width: 1024px) 576px, (min-width: 768px) min(576px, calc(50vw - 2.5rem)), calc(100vw - 2rem)"
                 />
               </div>
-              <div className="absolute -bottom-10 -right-10 z-0 h-64 w-64 rounded-xl bg-primary-container/20" />
+              <div className="absolute inset-x-0 -bottom-8 z-0 h-64 rounded-xl bg-primary-container/20 md:inset-x-auto md:-bottom-10 md:-right-10 md:left-auto md:w-64" />
             </div>
           </div>
         </section>
@@ -207,7 +224,7 @@ export default function HomePage() {
 
             <div
               id="projects"
-              className="group flex flex-col overflow-hidden rounded-xl bg-surface-container-high p-4 md:col-span-7 md:flex-row"
+              className="group flex min-h-0 flex-col overflow-hidden rounded-xl bg-surface-container-high p-4 md:col-span-7 md:flex-row md:items-stretch"
             >
               <div className="flex flex-1 flex-col justify-center p-8">
                 <span className="mb-4 block font-label text-xs font-bold uppercase tracking-widest text-on-surface-variant">
@@ -228,7 +245,7 @@ export default function HomePage() {
                   <MaterialSymbol name="auto_awesome" className="ml-2" />
                 </Link>
               </div>
-              <div className="relative h-64 flex-1 overflow-hidden rounded-lg md:h-auto md:min-h-64">
+              <div className="relative h-56 w-full shrink-0 overflow-hidden rounded-lg sm:h-64 md:h-72 md:min-h-64 md:flex-1">
                 <Image
                   src="/EeveeTCGTeaser.png"
                   alt="Pokémon Trading Card Game style card teaser"
@@ -243,31 +260,24 @@ export default function HomePage() {
         </section>
 
         {/* Inspired by */}
-        <section className="overflow-hidden bg-surface-container-low py-32">
-          <div className="mx-auto flex max-w-7xl flex-col items-center gap-20 px-8 md:flex-row">
-            <div className="order-2 flex-1 md:order-1">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="relative mt-12 h-64 overflow-hidden rounded-xl">
-                  <Image
-                    src={INSPIRED_IMGS[0]}
-                    alt="Yellow Labrador in tall grass at golden hour"
-                    fill
-                    className="object-cover"
-                    sizes="(min-width: 768px) 25vw, 50vw"
-                  />
-                </div>
-                <div className="relative h-64 overflow-hidden rounded-xl">
-                  <Image
-                    src={INSPIRED_IMGS[1]}
-                    alt="Silver tabby kitten sleeping curled in a chunky knit blanket"
-                    fill
-                    className="object-cover"
-                    sizes="(min-width: 768px) 25vw, 50vw"
-                  />
-                </div>
+        <section className="overflow-hidden bg-surface-container-low py-20 sm:py-24 md:py-32">
+          <div className="mx-auto flex w-full max-w-7xl flex-col items-stretch gap-12 px-4 sm:gap-16 sm:px-6 md:flex-row md:items-center md:gap-20 md:px-8">
+            <div className="order-2 w-full min-w-0 flex-1 shrink-0 md:order-1 md:max-w-none">
+              <div className="grid w-full grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3">
+                {INSPIRED_GALLERY.map((item) => (
+                  <div key={item.src} className={item.className}>
+                    <Image
+                      src={item.src}
+                      alt={item.alt}
+                      fill
+                      className="object-cover"
+                      sizes="(min-width: 1024px) 320px, (min-width: 768px) 30vw, min(100vw - 2rem, 480px)"
+                    />
+                  </div>
+                ))}
               </div>
             </div>
-            <div className="order-1 flex-1 space-y-8 md:order-2">
+            <div className="order-1 w-full min-w-0 flex-1 space-y-8 md:order-2">
               <h2 className="font-headline text-4xl font-extrabold leading-tight">
                 The &quot;Pawsitive&quot; <br />
                 Influence
@@ -286,8 +296,6 @@ export default function HomePage() {
           </div>
         </section>
       </main>
-
-      <ContactHeartFab />
     </>
   );
 }
