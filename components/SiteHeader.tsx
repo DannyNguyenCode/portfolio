@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { MaterialSymbol } from "@/components/MaterialSymbol";
 
 const nav = [
-  { href: "/", label: "The Hearth" },
+  { href: "/", label: "The Lounge" },
   { href: "/skills", label: "The Craftmanship" },
   { href: "/employment", label: "Professional Journey" },
   { href: "/projects", label: "Technical Creations" },
@@ -21,15 +21,15 @@ function linkActive(pathname: string, href: string) {
 
 function desktopLinkClass(active: boolean) {
   return `font-headline text-sm tracking-tight whitespace-nowrap transition-colors duration-300 lg:text-[0.9375rem] ${active
-      ? "border-b-2 border-primary pb-1 font-bold text-primary"
-      : "text-on-surface-variant hover:text-primary"
+    ? "border-b-2 border-primary pb-1 font-bold text-primary"
+    : "text-on-surface-variant hover:text-primary"
     }`;
 }
 
 function mobileLinkClass(active: boolean) {
   return `font-headline block rounded-lg px-3 py-3.5 text-base transition-colors ${active
-      ? "bg-primary-container/25 font-bold text-primary"
-      : "text-on-surface-variant hover:bg-surface-container-high/80 hover:text-on-surface"
+    ? "bg-primary-container/25 font-bold text-primary"
+    : "text-on-surface-variant hover:bg-surface-container-high/80 hover:text-on-surface"
     }`;
 }
 
@@ -91,7 +91,7 @@ export function SiteHeader() {
           onClick={() => setMenuOpen(false)}
         >
           <span className="wrap-break-word leading-tight">
-            The Digital Hearth
+            The Web Design Lounge
           </span>
         </Link>
 

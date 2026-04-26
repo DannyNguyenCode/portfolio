@@ -7,7 +7,7 @@ import { MaterialSymbol } from "@/components/MaterialSymbol";
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "Curated technical creations — full-stack apps, APIs, and the Digital Hearth portfolio.",
+    "Curated technical creations — full-stack apps, APIs, and the Web Design Lounge portfolio.",
 };
 
 const cardShadow = "shadow-[0_20px_40px_rgba(55,45,36,0.06)]";
@@ -203,7 +203,7 @@ export default function ProjectsPage() {
           </div>
         </div>
 
-        {/* The Digital Hearth */}
+        {/* The Web Design Lounge */}
         <div
           className={`relative w-full overflow-hidden rounded-xl p-6 shadow-[0_20px_40px_rgba(55,45,36,0.06)] sm:p-8 md:col-span-8 md:p-12`}
         >
@@ -212,7 +212,7 @@ export default function ProjectsPage() {
           <div className="relative flex w-full min-w-0 flex-col gap-8 md:flex-row md:items-center">
             <div className="w-full min-w-0 md:w-1/2">
               <h2 className="mb-6 font-headline text-3xl font-bold tracking-tighter text-on-surface md:text-4xl">
-                The Digital Hearth
+                The Web Design Lounge
               </h2>
               <p className="mb-8 text-base leading-relaxed text-on-surface-variant">
                 This portfolio is a living testament to my philosophy. Built with

@@ -69,7 +69,7 @@ export default function EducationPage() {
             </div>
             <div className="absolute -bottom-8 -right-8 z-20 max-w-[200px] rounded-lg bg-surface-bright p-6 shadow-xl">
               <p className="text-sm font-medium italic text-on-surface">
-                &ldquo;The hearth of my career was built here, brick by line of
+                &ldquo;The Web Design Lounge of my career was built here, brick by line of
                 code.&rdquo;
               </p>
             </div>
@@ -185,7 +185,7 @@ export default function EducationPage() {
         </div>
       </section>
 
-      {/* Proficiency Hearth */}
+      {/* Proficiency Web Design Lounge */}
       <section className="mb-24">
         <div className="relative overflow-hidden rounded-xl bg-surface-container-low p-12 md:p-20">
           <div className="pointer-events-none absolute top-0 right-0 h-full w-1/3 opacity-10">
@@ -196,7 +196,7 @@ export default function EducationPage() {
           </div>
           <div className="relative z-10 max-w-2xl">
             <h2 className="mb-8 font-headline text-3xl font-bold md:text-5xl">
-              The Proficiency Hearth
+              The Proficiency Web Design Lounge
             </h2>
             <div className="space-y-10">
               <div className="space-y-3">

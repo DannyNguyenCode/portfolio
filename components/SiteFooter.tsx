@@ -2,13 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 const CREW = [
-  { name: "Mina", src: "/MinaCrew.png", alt: "Mina" },
   { name: "Nala", src: "/NalaCrew.png", alt: "Nala" },
+  { name: "Mina", src: "/MinaCrew.png", alt: "Mina" },
   { name: "Flair", src: "/FlairCrew.png", alt: "Flair" },
 ] as const;
 
 const FOOTER_NAV = [
-  { href: "/", label: "The Hearth" },
+  { href: "/", label: "The Web Design Lounge" },
   { href: "/skills", label: "The Craftmanship" },
   { href: "/employment", label: "Professional Journey" },
   { href: "/projects", label: "Technical Creations" },
@@ -22,7 +22,7 @@ export function SiteFooter() {
       <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-12 md:flex-row">
         <div className="max-w-sm">
           <div className="mb-6 font-headline text-2xl font-bold tracking-tighter text-primary">
-            The Digital Hearth
+            The Web Design Lounge
           </div>
           <p className="mb-8 text-sm leading-relaxed text-stone-600">
             Designing interfaces that feel like home. Built with love for clean
@@ -97,7 +97,7 @@ export function SiteFooter() {
       </div>
       <div className="mx-auto mt-16 flex max-w-7xl flex-col items-start justify-between gap-6 border-t border-primary/10 pt-8 text-xs text-stone-500 md:flex-row md:items-center">
         <div className="text-left">
-          © {new Date().getFullYear()} The Digital Hearth. Inspired by Nala,
+          © {new Date().getFullYear()} The Web Design Lounge. Inspired by Nala,
           Mina, and Flair.
         </div>
         <div className="flex w-fit flex-col items-start gap-2">

@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`light scroll-smooth ${plusJakarta.variable} ${beVietnam.variable}`}
+      className={`light ${plusJakarta.variable} ${beVietnam.variable}`}
     >
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />

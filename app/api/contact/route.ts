@@ -56,8 +56,8 @@ export async function POST(request: Request) {
   }
 
   const subject = nameStr
-    ? `The Digital Hearth: message from ${nameStr}`
-    : "The Digital Hearth: new message";
+    ? `The Web Design Lounge: message from ${nameStr}`
+    : "The Web Design Lounge: new message";
 
   const origin = getPublicSiteOrigin();
   const text = buildOwnerNotificationPlainText({

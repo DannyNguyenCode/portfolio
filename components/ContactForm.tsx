@@ -74,7 +74,7 @@ export function ContactForm() {
       ) : null}
 
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-        <div className="space-y-2">
+        <div className="flex flex-col gap-4">
           <label className={labelClass} htmlFor="contact-name">
             Name
           </label>
@@ -90,7 +90,7 @@ export function ContactForm() {
             }}
           />
         </div>
-        <div className="space-y-2">
+        <div className="flex flex-col gap-4">
           <label className={labelClass} htmlFor="contact-email">
             Email
           </label>
@@ -108,7 +108,7 @@ export function ContactForm() {
           />
         </div>
       </div>
-      <div className="space-y-2">
+      <div className="flex flex-col gap-4">
         <label className={labelClass} htmlFor="contact-message">
           Message
         </label>

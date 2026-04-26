@@ -34,25 +34,21 @@ export default function EmploymentPage() {
           className={`rounded-xl bg-surface-container-lowest p-6 transition-all hover:bg-surface-bright sm:p-8 md:col-span-8 md:p-10 ${cardShadow}`}
         >
           <div className="space-y-4">
-            <div className="inline-flex items-center gap-2 rounded-full bg-surface-container px-4 py-1.5 text-sm font-bold text-primary">
-              <MaterialSymbol name="pets" className="text-sm" filled />
-              Supported by Mina
-            </div>
             <h2 className="font-headline text-2xl font-bold text-on-surface sm:text-3xl">
-              Junior Developer (Freelance)
+              Website Developer (Freelance)
             </h2>
             <div className="flex flex-wrap items-center justify-between gap-4">
               <div className="min-w-0 space-y-1">
                 <h3 className="font-headline text-lg font-semibold text-secondary sm:text-xl">
-                  The Digital Hearth
+                  Nice Guy Web Design
                 </h3>
                 <p className="font-label text-xs font-bold tracking-widest text-on-surface-variant uppercase">
-                  2023 – Present
+                  2026 – Present
                 </p>
               </div>
               <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full bg-surface-container-high md:h-32 md:w-32 lg:h-36 lg:w-36">
                 <Image
-                  src="/MinaEmploymentHero.png"
+                  src="/journeyFlair.png"
                   alt="Warm workspace with Mina nearby"
                   fill
                   className="object-cover"
@@ -80,7 +76,7 @@ export default function EmploymentPage() {
                   className="mt-0.5 shrink-0 text-primary-fixed-dim"
                 />
                 <p className="text-base leading-relaxed text-on-surface sm:text-lg">
-                  Applying modern React patterns and a Digital Hearth philosophy:
+                  Applying modern React patterns and a Web Design Lounge philosophy:
                   interfaces that feel human, intentional, and easy to maintain.
                 </p>
               </li>
@@ -98,7 +94,7 @@ export default function EmploymentPage() {
               Benefits Customer Care
             </h2>
             <h3 className="font-headline text-base font-medium text-on-surface-variant sm:text-lg">
-              The Digital Hearth / Healthcare Solutions
+              Healthcare Solutions
             </h3>
             <p className="text-sm text-stone-500">Aug 2025 – Present</p>
           </div>

@@ -55,7 +55,7 @@ export function buildOwnerNotificationHtml(options: {
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta http-equiv="x-ua-compatible" content="ie=edge"/>
-<title>New contact — The Digital Hearth</title>
+<title>New contact — The Web Design Lounge</title>
 </head>
 <body style="margin:0;padding:0;background-color:#f9e5d4;${fontBody}color:#372d24;">
 <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#f9e5d4;padding:16px 8px 32px;">
@@ -66,7 +66,7 @@ export function buildOwnerNotificationHtml(options: {
 <td style="padding:20px 28px 16px;background-color:#fff5ee;border-bottom:1px solid rgba(186,170,157,0.15);">
 <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
 <tr>
-<td align="left" style="${fontHead}font-size:22px;font-weight:800;letter-spacing:-0.03em;color:#8f4800;">The Digital Hearth</td>
+<td align="left" style="${fontHead}font-size:22px;font-weight:800;letter-spacing:-0.03em;color:#8f4800;">The Web Design Lounge</td>
 </tr>
 </table>
 </td>
@@ -113,7 +113,7 @@ export function buildOwnerNotificationPlainText(options: {
 }): string {
   const { nameStr, emailStr, messageStr } = options;
   return [
-    "New contact message — The Digital Hearth",
+    "New contact message — The Web Design Lounge",
     "",
     ...(nameStr ? [`Name: ${nameStr}`] : []),
     `Email: ${emailStr}`,

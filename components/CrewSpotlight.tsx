@@ -203,7 +203,7 @@ export const flairSpotlightPreset: Omit<CrewSpotlightProps, "className"> = {
   title: <>Flair's Energetic<br /><span className='text-primary italic'> Research Hub</span></>,
   description: (
     <>
-      As our Senior Research Assistant and the youngest member of the Digital Hearth, Flair provides the essential{" "}
+      As our Senior Research Assistant and the youngest member of the Web Design Lounge, Flair provides the essential{" "}
       <span className="font-bold text-primary-dim italic">
         late-night debugging energy
       </span>{" "}
@@ -215,7 +215,7 @@ export const flairSpotlightPreset: Omit<CrewSpotlightProps, "className"> = {
       icon: "bolt",
       title: "Debugging Energy",
       description:
-        "High-intensity sprint support when deadlines loom and the hearth stays lit past midnight.",
+        "High-intensity sprint support when deadlines loom and the Web Design Lounge stays lit past midnight.",
     },
     {
       icon: "center_focus_strong",

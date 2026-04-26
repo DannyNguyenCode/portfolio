@@ -7,7 +7,7 @@ import { MaterialSymbol } from "@/components/MaterialSymbol";
 export const metadata: Metadata = {
   title: "Portfolio",
   description:
-    "The Digital Hearth — building software with a developer's mind and a caregiver's heart.",
+    "The Web Design Lounge — building software with a developer's mind and a caregiver's heart.",
 };
 
 const cardShadow = "shadow-[0_20px_40px_rgba(55,45,36,0.06)]";
@@ -27,7 +27,7 @@ const INSPIRED_GALLERY = [
   },
   {
     src: "/FlairEmployment.png",
-    alt: "Flair at the hearth—playful energy beside the work setup",
+    alt: "Flair at the Web Design Lounge—playful energy beside the work setup",
     className:
       "relative col-span-2 aspect-[16/9] min-h-[200px] w-full overflow-hidden rounded-xl sm:min-h-[220px] md:col-span-1 md:mt-12 md:aspect-auto md:h-64 md:min-h-0",
   },
@@ -53,24 +53,43 @@ export default function HomePage() {
       <main className="pt-12 md:pt-28 lg:pt-32">
         {/* Hero */}
         <section className="mx-auto max-w-7xl px-8 pb-20 md:pb-30">
-          <div className="flex flex-col items-center gap-16 md:flex-row">
-            <div className="flex-1 space-y-8">
-              <div className="inline-flex items-center gap-2 rounded-full bg-surface-container px-4 py-2">
-                <MaterialSymbol
-                  name="home_health"
-                  className="text-primary"
+          <div className="mb-8 inline-flex items-center gap-2 rounded-full bg-surface-container px-4 py-2 md:mb-10">
+            <MaterialSymbol
+              name="home_health"
+              className="text-primary"
+            />
+            <span className="font-label text-xs font-bold uppercase tracking-wider text-on-surface-variant">
+              Welcome to the Web Design Lounge
+            </span>
+          </div>
+
+          <div className="flow-root">
+            <div className="relative z-10 mx-auto mb-10 aspect-square w-full max-w-[min(100%,28rem)] shrink-0 md:float-right md:mb-6 md:ml-10 md:mt-1 md:w-[min(42%,26rem)] md:max-w-none lg:ml-12 lg:w-[min(40%,28rem)]">
+              <div
+                className={`relative z-10 aspect-square w-full overflow-hidden rounded-xl ${cardShadow}`}
+              >
+                <Image
+                  src="/FlairHomepageHero.png"
+                  alt="Flair at the Web Design Lounge — warm home workspace"
+                  fill
+                  preload
+                  fetchPriority="high"
+                  loading="eager"
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 448px, (min-width: 768px) min(416px, 42vw), calc(100vw - 2rem)"
                 />
-                <span className="font-label text-xs font-bold uppercase tracking-wider text-on-surface-variant">
-                  Welcome to the Digital Hearth
-                </span>
               </div>
+              <div className="absolute inset-x-0 -bottom-8 z-0 h-64 rounded-xl bg-primary-container/20 md:inset-x-auto md:-bottom-10 md:-right-10 md:left-auto md:w-64" />
+            </div>
+
+            <div className="space-y-8">
               <h1 className="font-headline text-5xl font-extrabold leading-tight tracking-tight text-on-surface md:text-7xl">
                 Building software with a{" "}
                 <span className="text-primary italic">developer&apos;s mind</span>{" "}
                 and a{" "}
                 <span className="text-secondary">caregiver&apos;s heart</span>.
               </h1>
-              <p className="max-w-xl text-base leading-relaxed text-on-surface-variant">
+              <p className="text-base leading-relaxed text-on-surface-variant md:max-w-none">
                 A cozy space where technology meets empathy. Backed by my
                 incredible support crew: <strong>Nala</strong>,{" "}
                 <strong>Mina</strong>, and <strong>Flair</strong>.
@@ -107,23 +126,6 @@ export default function HomePage() {
                 ))}
               </div>
             </div>
-            <div className="relative w-full min-w-0 flex-1 shrink-0 md:min-h-0">
-              <div
-                className={`relative z-10 mx-auto aspect-square w-full max-w-[min(100%,28rem)] overflow-hidden rounded-xl md:mx-0 md:max-w-none ${cardShadow}`}
-              >
-                <Image
-                  src="/FlairHomepageHero.png"
-                  alt="Flair at the Digital Hearth — warm home workspace"
-                  fill
-                  preload
-                  fetchPriority="high"
-                  loading="eager"
-                  className="object-cover"
-                  sizes="(min-width: 1024px) 576px, (min-width: 768px) min(576px, calc(50vw - 2.5rem)), calc(100vw - 2rem)"
-                />
-              </div>
-              <div className="absolute inset-x-0 -bottom-8 z-0 h-64 rounded-xl bg-primary-container/20 md:inset-x-auto md:-bottom-10 md:-right-10 md:left-auto md:w-64" />
-            </div>
           </div>
         </section>
 
@@ -131,24 +133,49 @@ export default function HomePage() {
         <section className="mx-auto max-w-7xl px-8 pb-32">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-12">
             <div
-              id="skills"
-              className={`group flex flex-col justify-between rounded-xl bg-surface-container-lowest p-12 transition-colors duration-300 hover:bg-surface-bright md:col-span-8 ${cardShadow}`}
+              id="experience"
+              className="group flex flex-col justify-between rounded-xl bg-surface-container p-12 md:col-span-8"
             >
               <div>
                 <span className="mb-4 block font-label text-xs font-bold uppercase tracking-widest text-secondary">
-                  Skills in Action
+                  The Professional Journey
                 </span>
                 <h2 className="mb-6 font-headline text-3xl font-bold">
+                  From Caregiver to Creator
+                </h2>
+                <p className="mb-8 text-base leading-relaxed text-on-surface-variant">
+                  Blending a deep background in customer care with freelance
+                  development. Empathy drives my code.
+                </p>
+              </div>
+              <Link
+                href="/employment"
+                className="inline-flex items-center font-bold text-primary transition-transform group-hover:translate-x-2"
+              >
+                Full Experience{" "}
+                <MaterialSymbol name="arrow_forward" className="ml-2" />
+              </Link>
+            </div>
+
+            <div
+              id="skills"
+              className="flex flex-col justify-between rounded-xl bg-primary p-12 text-on-primary md:col-span-4"
+            >
+              <div>
+                <span className="mb-4 block font-label text-xs font-bold uppercase tracking-widest text-on-primary">
+                  Skills in Action
+                </span>
+                <h2 className="mb-4 font-headline text-3xl font-bold">
                   Crafting with Modern Tools
                 </h2>
-                <div className="mb-8 grid grid-cols-2 gap-6 md:grid-cols-3">
+                <div className="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
                   {SKILL_ROWS.map((row) => (
                     <div key={row.label} className="space-y-2">
-                      <p className="font-semibold">{row.label}</p>
-                      <div className="h-2 w-full overflow-hidden rounded-full bg-surface-container-highest">
+                      <p className="font-semibold text-on-primary">{row.label}</p>
+                      <div className="h-2 w-full overflow-hidden rounded-full bg-on-primary/20">
                         <div
-                          className="h-full rounded-full bg-linear-to-r from-secondary to-secondary-fixed-dim"
-                          style={{ width: row.width }}
+                          className="h-full rounded-full bg-on-primary"
+                          style={{ width: row.width, maxWidth: "100%" }}
                         />
                       </div>
                     </div>
@@ -157,7 +184,7 @@ export default function HomePage() {
               </div>
               <Link
                 href="/skills"
-                className="inline-flex items-center font-bold text-primary transition-transform group-hover:translate-x-2"
+                className="w-fit mt-8 inline-flex rounded-md border-2 border-transparent px-2 py-1 font-bold transition-colors hover:border-on-primary"
               >
                 Explore Full Skillset{" "}
                 <MaterialSymbol name="arrow_forward" className="ml-2" />
@@ -166,59 +193,38 @@ export default function HomePage() {
 
             <div
               id="education"
-              className="flex flex-col justify-between rounded-xl bg-primary p-12 text-on-primary md:col-span-4"
-            >
-              <div>
-                <span className="mb-4 block font-label text-xs font-bold uppercase tracking-widest text-on-primary">
-                  Academic Foundation
-                </span>
-                <h2 className="mb-4 font-headline text-3xl font-bold">
-                  Seneca Honors
-                </h2>
-                <p className="mb-6 text-lg leading-relaxed text-on-primary">
-                  Maintained a 3.8 GPA while pursuing excellence in Computer
-                  Science at Seneca College.
-                </p>
-                <div className="inline-block rounded-lg bg-on-primary/10 p-4">
-                  <span className="text-2xl font-extrabold">3.8 GPA</span>
-                </div>
-              </div>
-              <Link
-                href="/education"
-                className="mt-8 inline-flex items-center font-bold hover:underline hover:underline-offset-4"
-              >
-                View Honors{" "}
-                <MaterialSymbol name="school" className="ml-2" />
-              </Link>
-            </div>
-
-            <div
-              id="experience"
-              className="flex flex-col gap-8 rounded-xl bg-surface-container p-12 md:col-span-5"
+              className={`flex flex-col gap-8 rounded-xl bg-surface-container-lowest p-12 transition-colors duration-300 hover:bg-surface-bright md:col-span-5 ${cardShadow}`}
             >
               <div className="flex h-20 w-20 items-center justify-center rounded-full bg-surface">
                 <MaterialSymbol
-                  name="work_history"
+                  name="school"
                   className="text-3xl text-primary"
                 />
               </div>
               <div>
                 <span className="mb-4 block font-label text-xs font-bold uppercase tracking-widest text-on-surface-variant">
-                  The Professional Journey
+                  Academic Foundation
                 </span>
                 <h2 className="mb-4 font-headline text-3xl font-bold">
-                  From Caregiver to Creator
+                  Seneca Honors
                 </h2>
                 <p className="mb-6 text-base leading-relaxed text-on-surface-variant">
-                  Blending a deep background in customer care with freelance
-                  development. Empathy drives my code.
+                  Maintained a 3.8 GPA while pursuing excellence in Computer
+                  Science at Seneca College.
                 </p>
-                <Link
-                  href="/employment"
-                  className="inline-block rounded-md bg-secondary px-8 py-3 font-bold text-on-secondary transition-opacity hover:opacity-90"
-                >
-                  Full Experience
-                </Link>
+                <div className="flex items-center gap-2 justify-around align-middle align-center">
+                  <div className="inline-block rounded-lg bg-surface-container-high px-4 py-3">
+                    <span className="text-2xl font-extrabold text-on-surface">
+                      3.8 GPA
+                    </span>
+                  </div>
+                  <Link
+                    href="/education"
+                    className="inline-block rounded-md bg-secondary px-8 py-3 font-bold text-on-secondary transition-opacity hover:opacity-90"
+                  >
+                    View Honors
+                  </Link>
+                </div>
               </div>
             </div>
 
@@ -289,7 +295,7 @@ export default function HomePage() {
                 &quot;Supported by Mina&quot;.
               </p>
               <div className="rounded-xl border-l-4 border-primary bg-surface-container-lowest p-8 italic text-on-surface-variant">
-                &ldquo;In a world of fast-paced tech, The Digital Hearth is a
+                &ldquo;In a world of fast-paced tech, The Web Design Lounge is a
                 reminder that people (and their pets) come first.&rdquo;
               </div>
             </div>

@@ -13,8 +13,8 @@ export const metadata: Metadata = {
 };
 
 const CREW_SIDEBAR = [
-  { name: "Mina", src: "/MinaCrew.png", alt: "Mina, happiness director" },
   { name: "Nala", src: "/NalaCrew.png", alt: "Nala, senior QA lead" },
+  { name: "Mina", src: "/MinaCrew.png", alt: "Mina, happiness director" },
   { name: "Flair", src: "/FlairCrew.png", alt: "Flair, junior debugger" },
 ] as const;
 
@@ -32,7 +32,7 @@ export default function ContactPage() {
           Connect
         </div>
         <h1 className="mb-8 font-headline text-5xl font-extrabold leading-tight tracking-tighter text-on-surface md:text-7xl">
-          Connect with the Hearth
+          Connect with the Web Design Lounge
         </h1>
         <p className="text-lg leading-relaxed text-on-surface-variant md:text-xl">
           Whether you&apos;re looking to build a new digital home, collaborate on
