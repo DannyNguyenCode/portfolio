@@ -18,8 +18,8 @@ const beVietnam = Be_Vietnam_Pro({
 
 export const metadata: Metadata = {
   title: {
-    default: "The Digital Hearth",
-    template: "%s | The Digital Hearth",
+    default: "The Web Design Lounge",
+    template: "%s | The Web Design Lounge",
   },
   description:
     "Portfolio — home, skills, employment, education, projects, and contact.",

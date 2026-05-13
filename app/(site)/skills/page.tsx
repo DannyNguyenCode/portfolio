@@ -7,7 +7,7 @@ import { MaterialSymbol } from "@/components/MaterialSymbol";
 export const metadata: Metadata = {
   title: "The Craftmanship",
   description:
-    "Core stack, backend ecosystem, and the support crew behind The Digital Hearth.",
+    "Core stack, backend ecosystem, and the support crew behind The Web Design Lounge.",
 };
 
 const CREW = [

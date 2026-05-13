@@ -27,7 +27,7 @@ const LINKS = {
     live: "https://niceguyservices.vercel.app/",
   },
   shoppingCartApi:
-    "https://github.com/DannyNguyenCode/shopping-cart-api",
+    "https://github.com/DannyNguyenCode/shoppingcart_api",
 } as const;
 
 export default function ProjectsPage() {
