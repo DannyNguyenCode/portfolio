@@ -22,9 +22,9 @@ const LINKS = {
     github: "https://github.com/DannyNguyenCode/pokemon-tradingcardgame",
     live: "https://pokemon-tradingcardgame.vercel.app",
   },
-  niceGuyServices: {
-    github: "https://github.com/DannyNguyenCode/niceguyservices",
-    live: "https://niceguyservices.vercel.app/",
+  pet200: {
+    github: "https://github.com/DannyNguyenCode/pet200",
+    live: "https://pet200.vercel.app/",
   },
   shoppingCartApi:
     "https://github.com/DannyNguyenCode/shoppingcart_api",
@@ -120,26 +120,30 @@ export default function ProjectsPage() {
           </div>
         </div>
 
-        {/* Nice Guy Services */}
+        {/* Pet200 */}
         <div
           className={`group flex flex-col justify-between rounded-xl bg-surface-container-lowest p-8 transition-colors duration-500 hover:bg-surface-bright md:col-span-4 ${cardShadow}`}
         >
           <div>
             <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-secondary-container">
               <MaterialSymbol
-                name="business_center"
+                name="pets"
                 className="text-on-secondary-container"
               />
             </div>
             <h2 className="mb-3 font-headline text-2xl font-bold text-on-surface">
-              Nice Guy Services
+              Pet200
             </h2>
             <p className="mb-6 text-sm leading-relaxed text-on-surface-variant">
-              Professional business presence built for speed and conversion using
-              modern utility-first styling and interactive components.
+              A RuneScape-inspired pet social platform that connects pet owners,
+              shelters, trainers, and local businesses through an MMO-style
+              community experience. The platform features RPG-inspired pet
+              profiles, playdate scheduling, ranking system, reviews, achievement
+              systems, and transparent donation campaigns supporting animal
+              welfare initiatives.
             </p>
             <div className="mb-6 flex flex-wrap gap-2">
-              {["REACT", "TAILWIND"].map((tag) => (
+              {["NEXT.JS", "MONGODB", "MUI"].map((tag) => (
                 <span
                   key={tag}
                   className="rounded bg-surface-container px-2 py-1 text-[10px] font-bold text-on-surface-variant"
@@ -149,24 +153,27 @@ export default function ProjectsPage() {
               ))}
             </div>
           </div>
-          <div className="flex items-center justify-between border-t border-surface-container pt-6">
-            <a
-              href={LINKS.niceGuyServices.live}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-bold text-primary hover:underline"
-            >
-              Demo
-            </a>
-            <a
-              href={LINKS.niceGuyServices.live}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-stone-400 transition-colors hover:text-on-surface"
-              aria-label="Open Nice Guy Services"
-            >
-              <MaterialSymbol name="arrow_outward" />
-            </a>
+          <div className="flex flex-wrap items-center justify-between gap-4 border-t border-surface-container pt-6">
+            <div className="flex flex-wrap items-center gap-4">
+              <a
+                href={LINKS.pet200.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm font-bold text-primary hover:underline"
+              >
+                <MaterialSymbol name="code" className="text-lg" />
+                GitHub
+              </a>
+              <a
+                href={LINKS.pet200.live}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm font-bold text-primary hover:underline"
+              >
+                <MaterialSymbol name="rocket_launch" className="text-lg" />
+                Live Demo
+              </a>
+            </div>
           </div>
         </div>
 
